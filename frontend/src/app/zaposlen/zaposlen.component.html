@@ -1,0 +1,57 @@
+<div id="page-container">
+    <div id="content-wrap">
+        <app-header></app-header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4" align="center">
+                    <img [src]="slika" alt="" onerror="this.src='../../assets/images/empty-avatar.jpg'">
+                      <!-- onerror="this.src='../../assets/images/empty-avatar.jpg'" -->
+                </div>
+                <div class="col-lg-4">
+                       <table style="font-size: 20px;">
+                           <tr>
+                               <td>Ime:</td>
+                               <td>{{user.name}}</td>
+                           </tr>
+                           <tr>
+                            <td>Prezime:</td>
+                            <td>{{user.lastname}}</td>
+                            </tr>
+                            <tr>
+                                <td>Mejl:</td>
+                                <td>{{user.mail}}</td>
+                            </tr>
+                            <tr>
+                                <td>Adresa:</td>
+                                <td>{{user.address}}</td>
+                            </tr>
+                            <tr>
+                                <td>Telefon:</td>
+                                <td>{{user.phone}}</td>
+                            </tr>
+                            <tr>
+                                <td>Zvanje:</td>
+                                <td>{{user.title}}</td>
+                            </tr>
+                            <tr *ngIf="user.title=='redovni profesor' || user.title=='vanredni profesor'">
+                                <td>Kabinet:</td>
+                                <td>{{user.office}}</td>
+                            </tr>
+                            <tr>
+                                <td>Biografija:</td>
+                                <td>
+                                    <textarea  cols="40" rows="5" [(ngModel)]="user.bio" readonly></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Vebsajt:</td>
+                                <td><a target="_blank" href="{{user.website}}">{{user.website}}</a></td> 
+                            </tr>
+                       </table>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <footer id="footer"> Copyright Nikola Milicevic - ETF SI 2021</footer>
+  </div>

@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark header">
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" routerLink="/" >
+          <img src="../../assets/images/logo.png" width="57" height="70" alt="bad_logo">
+          <span [ngClass]="{'klasa':actFlag=='pocetna'}"  style="margin-left: 30px;">
+              Početna
+          </span>
+        </a>
+      </nav>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a data-toggle="tab" class="nav-link" routerLink="/zaposleni" [ngClass]="{'active':actFlag=='zaposleni'}">Zaposleni</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a data-toggle="tab" class="nav-link dropdown-toggle" [ngClass]="{'active':actFlag=='osnovne'}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Osnovne studije
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" routerLink="/odsekrti">Odsek za Računarsku tehniku i informatiku</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" routerLink="/odseksi">Odsek za Softversko inženjerstvo</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" routerLink="/odsekostali">Ostali odseci</a>
+            </div>
+        </li>
+        <li data-toggle="tab" class="nav-item">
+            <a class="nav-link" routerLink="/odsekmaster" [ngClass]="{'active':actFlag=='master'}">Master studije</a>
+        </li>
+        <li data-toggle="tab" class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" [ngClass]="{'active':actFlag=='nauka'}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Nauka
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" routerLink="/istrazivanja">Istraživanja</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" routerLink="/projekti-nauka">Projekti</a>
+            </div>
+        </li>
+        <li data-toggle="tab" class="nav-item">
+            <a class="nav-link" [ngClass]="{'active':actFlag=='kontakt'}" routerLink="/kontakt">Kontakt</a>
+        </li>
+        <div *ngIf="tip=='Z'">
+          <li data-toggle="tab" class="nav-item">
+            <a class="nav-link" [ngClass]="{'active':actFlag=='profil'}" routerLink="/profil">Profil</a>
+        </li>
+        </div>
+        <div *ngIf="tip=='A'">
+          <li data-toggle="tab" class="nav-item">
+            <a class="nav-link" routerLink="/admin" [ngClass]="{'active':actFlag=='admin'}">Admin panel</a>
+        </li>
+        </div>
+        <div *ngIf="tip=='S'">
+          <li data-toggle="tab" class="nav-item">
+            <a class="nav-link" routerLink="/biranje" [ngClass]="{'active':actFlag=='biranje'}">Biranje predmeta</a>
+        </li>
+        </div>
+
+      </ul>
+    </div>
+    <div align="right" style="padding-top: 60px;">
+      <div *ngIf="loggedIn==true">
+        <span style="color:lightgray">Dobrodošli, {{user.name}} {{user.lastname}}</span>
+      </div>
+    </div>
+  </nav>

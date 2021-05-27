@@ -1,0 +1,59 @@
+<div id="page-container">
+    <div id="content-wrap">
+        <app-header></app-header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4" align="center" style="margin-bottom: 50px;">
+                    <table>
+                        <tr>
+                            <td>Korisničko ime:  </td>
+                            <td>{{user.username}}</td>
+                        </tr>
+                        <tr>
+                            <td>Izmena adrese:</td>
+                            <td><input type='text' name='address' [(ngModel)]='user.address' size="30"></td>
+                        </tr>
+                        <tr>
+                            <td>Izmena telefona:</td>
+                            <td><input type='text' name='phone' [(ngModel)]='user.phone' size="30"></td>
+                        </tr>
+                        <tr>
+                            <td>Izmena biografije:</td>
+                            <td><textarea rows="3" cols="33" name='area' [(ngModel)]='user.bio'></textarea></td>
+                        </tr>
+                        <tr *ngIf="user.title=='redovni profesor' || user.title=='vanredni profesor'">
+                            <td>Izmena kabineta:</td>
+                            <td><input type='text' name='office' [(ngModel)]='user.office' size="30"></td>
+                        </tr>
+                    </table>
+                    <button (click)="azurirajPodatke()" class="btn btn-warning">Ažuriraj podatke</button>
+                    {{msgUpd}}
+                </div>
+                <div class="col-lg-3 cent" style="margin-bottom: 50px;">
+                      <!--tu ce sliku svoju videti-->
+                      <img [src]="slika" alt=""onerror="this.src='../../assets/images/empty-avatar.jpg'" >
+                      <!-- onerror="this.src='../../assets/images/empty-avatar.jpg'" -->
+                </div>
+                <div class="col-lg-1" style="margin-bottom: 50px;">
+                    <h6>Angažovani ste na:</h6>
+                    <div *ngFor="let p of planAngSvi">
+                        {{p.sifra}}
+                    </div>
+                </div>
+                <div class="col-lg-4">
+
+                </div>
+                <div class="col-lg-4" align="center">
+                    <app-obavestenja></app-obavestenja>
+                </div>
+                <div class="col-lg-4" align="center">
+                    <app-azuriranje-obavestenja></app-azuriranje-obavestenja>
+                </div>
+                <div class="col-lg-4" align="center">
+                    <app-brisanje-obavestenja></app-brisanje-obavestenja>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"> Copyright Nikola Milicevic - ETF SI 2021</footer>
+  </div>

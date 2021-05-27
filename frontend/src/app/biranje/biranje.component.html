@@ -1,0 +1,18 @@
+<div id="page-container">
+    <div id="content-wrap">
+        <app-header></app-header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 offset-lg-4" align="center">
+                    <h3>Ovde možete izabrati predmete koje slušate  </h3>
+                    <select name="ppp" [(ngModel)]='izabraniPredmeti' multiple size="15">
+                        <option *ngFor="let p of sviPredmeti" value={{p.sifra}}> {{p.naziv}} - {{p.sifra}} {{p.odsek}}</option>
+                    </select>    <br/>
+                    <hr/>
+                    <input type="button" (click)="izaberi()" value="Završi biranje" class="btn btn-primary">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"> Copyright Nikola Milicevic - ETF SI 2021</footer>
+  </div>

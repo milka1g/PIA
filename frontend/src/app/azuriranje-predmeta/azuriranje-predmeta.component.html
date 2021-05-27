@@ -1,0 +1,308 @@
+<h5>Ove predmete možete ažurirati:</h5>
+        <div *ngIf="sviPredmetiZap.length>0">
+            <select name="name" [(ngModel)]='predmetUpdateSifra' (change)="izabranPredmet()">
+                <option *ngFor="let p of sviPredmetiZap" value={{p.sifra}}> {{p.naziv}}</option>
+        </select> 
+        <hr/>
+        <ul class="nav nav-tabs" style="color:lightgreen">
+            <li class="nav-item" (click)="changeTab(1);">
+              <a class="nav-link" [ngClass]="{active:tab==1}" >O predmetu</a>
+            </li>
+            <li class="nav-item" (click)="changeTab(2);">
+              <a class="nav-link" [ngClass]="{active:tab==2}" >Predavanja</a>
+            </li>
+            <li class="nav-item" (click)="changeTab(3);">
+              <a class="nav-link" [ngClass]="{active:tab==3}" >Vežbe</a>
+            </li>
+            <li class="nav-item" (click)="changeTab(4);">
+              <a class="nav-link" [ngClass]="{active:tab==4}" >Ispitna pitanja</a>
+            </li>
+            <li class="nav-item" (click)="changeTab(5);">
+                <a class="nav-link" [ngClass]="{active:tab==5}" >Laboratorija</a>
+            </li>
+            <li class="nav-item" (click)="changeTab(6);">
+                <a class="nav-link" [ngClass]="{active:tab==6}" >Projekat/Domaći</a>
+            </li>
+            <li class="nav-item" (click)="changeTab(7);">
+                <a class="nav-link" [ngClass]="{active:tab==7}" >Aktivacija/Deaktivacija</a>
+            </li>
+          </ul>
+          <hr/>
+
+          <div *ngIf="tab==1">
+            <table>
+                <!-- tu stavi 2way sa propertijima predmeta-->
+                <tr>
+                    <td>Naziv:</td>
+                    <td><input type='text' name='naziv' [(ngModel)]='naziv'></td>
+                </tr>
+                <tr>
+                    <td>Tip:</td>
+                            <td> <input type="radio" [(ngModel)]='tipP' value="izborni">Izborni
+                                <input type="radio" [(ngModel)]='tipP' value="obavezni">Obavezni
+                            </td>
+                </tr>
+                <tr>
+                    <td>Semestar:</td>
+                    <td>
+                        <select name="semestar" [(ngModel)]='semestar'>
+                            <option [ngValue]="1">1</option>
+                            <option [ngValue]="2">2</option>
+                            <option [ngValue]="3">3</option>
+                            <option [ngValue]="4">4</option>
+                            <option [ngValue]="5">5</option>
+                            <option [ngValue]="6">6</option>
+                            <option [ngValue]="7">7</option>
+                            <option [ngValue]="8">8</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Godina:</td>
+                    <td>
+                        <select name="godina" [(ngModel)]='godina'>
+                            <option [ngValue]="1">1</option>
+                            <option [ngValue]="2">2</option>
+                            <option [ngValue]="3">3</option>
+                            <option [ngValue]="4">4</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Odsek:</td>
+                    <td>
+                        <select name="odsek" [(ngModel)]='odsek'>
+                            <option value="rti">RTI</option>
+                            <option value="si">SI</option>
+                            <option value="ostali">Ostali</option>
+                            <option value="master">Master</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Šifra:</td>
+                    <td><input type='text' name='sifra' [(ngModel)]='sifra'></td>
+                </tr>
+                <tr>
+                    <td>Fond:</td>
+                    <td><input type='text' name='fond' (change)="terminiInputs()"  [(ngModel)]='fond'></td>
+                </tr>
+                <tr>
+                    <td>Espb:</td>
+                    <td><select name="espb" [(ngModel)]='espb'>
+                        <option [ngValue]="2">2</option>
+                        <option [ngValue]="3">3</option>
+                        <option [ngValue]="5">5</option>
+                        <option [ngValue]="6">6</option>
+                    </select>
+                </td>
+                </tr>
+                <tr>
+                    <td>Dodatne info:</td>
+                    <td><input type='text' name='dodatno' [(ngModel)]='dodatno'></td>
+                </tr>
+                <tr>
+                    <td>Cilj:</td>
+                    <td><textarea rows="2" cols="35" name='cilj' [(ngModel)]='cilj'></textarea></td>
+                </tr>
+                <tr>
+                    <td>Ishod:</td>
+                    <td><textarea rows="2" cols="35" name='ishod' [(ngModel)]='ishod'></textarea></td>
+                </tr>
+                <tr>
+                    <td>Termini predavanja:</td>
+                    <td>
+                        <div *ngFor="let t of arrayP; let i = index;">
+                            <input type='text' [(ngModel)]="predavanjaTerm[i]">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Termini vežbi:</td>
+                    <td>
+                        <div *ngFor="let t of arrayV; let i = index;">
+                            <input type='text' [(ngModel)]="vezbeTerm[i]">
+                        </div>
+                    </td> 
+                </tr>
+            </table>
+            <hr/>
+            <button (click)="azurirajPredmet()" class="btn btn-primary">Ažuriraj predmet</button>
+            {{msgUpdPred}}
+          </div>
+          <div *ngIf="tab==2">
+            <table>
+                <tr>
+                   <h5>Materijali odabranog predmeta:</h5> 
+                </tr>
+                <tr *ngFor="let f of predavanjaFajlovi">
+                    <h6>{{f.naziv}}</h6> veličina: {{f.velicina}}KB datum: {{f.datum}} tip:{{f.tip}} postavio: {{f.ime}} {{f.prezime}}
+                     <button (click)="downloadFile(f.naziv);" class="btn btn-outline-warning" style="margin-right: 10px;">Preuzmite</button>
+                    <button (click)="removeFile(f.naziv,'P');event.preventDefault()" type="button" class="btn btn-outline-warning"style="margin-right: 10px;">Uklonite</button>
+                    <!-- <input type="button" value="Uklonite" (click)="removeFile(f.naziv,'P');" class="btn btn-outline-warning"style="margin-right: 10px;">-->
+                    <button (click)="prioritetPlus(f.naziv,'P');" class="btn btn-outline-warning" style="margin-right: 10px;">+</button>
+                    <button (click)="prioritetMinus(f.naziv,'P');" class="btn btn-outline-warning">-</button>
+                    <hr/>
+                </tr>
+                <tr>
+                    Dodajte novi materijal:
+                    
+                    <input
+                    style="display: none"
+                    type="file" (change)="onFileChanged($event);onFileSelected($event)" name='file'
+                    #fileInput>
+
+
+                  <button (click)="fileInput.click()" class="btn btn-warning" style="margin-right: 30px; margin-left: 20px;">Izaberite fajl</button> 
+                  <button class="btn btn-danger" (click)="onUpload('P')">Upload</button>
+                  <span>{{filename}} {{upl}}</span>
+                   
+                </tr>
+            </table>
+          </div>
+          <div *ngIf="tab==3">
+            <table>
+                <tr>
+                   <h5>Materijali odabranog predmeta:</h5> 
+                </tr>
+                <tr *ngFor="let f of vezbeFajlovi">
+                    <h6>{{f.naziv}}</h6> veličina: {{f.velicina}}KB datum: {{f.datum}} tip:{{f.tip}} postavio: {{f.ime}} {{f.prezime}}
+                     <button (click)="downloadFile(f.naziv);" class="btn btn-outline-warning" style="margin-right: 10px;">Preuzmite</button>
+                    <button (click)="removeFile(f.naziv,'V');" class="btn btn-outline-warning" style="margin-right: 10px;" >Uklonite</button>
+                    <button (click)="prioritetPlus(f.naziv,'V');" class="btn btn-outline-warning" style="margin-right: 10px;">+</button>
+                    <button (click)="prioritetMinus(f.naziv,'V');" class="btn btn-outline-warning">-</button>
+                    <hr/>
+                </tr>
+                <tr>
+                    Dodajte novi materijal:
+                    
+                    <input
+                    style="display: none"
+                    type="file" (change)="onFileChanged($event);onFileSelected($event)" name='file'
+                    #fileInput>
+
+
+                  <button (click)="fileInput.click()" class="btn btn-warning" style="margin-right: 30px; margin-left: 20px;">Izaberite fajl</button> 
+                  <button class="btn btn-danger" (click)="onUpload('V')">Upload</button>
+                  <span>{{filename}} {{upl}}</span>
+                </tr>
+            </table>
+          </div>
+          <div *ngIf="tab==4">
+            <table>
+                <tr>
+                   <h5>Materijali odabranog predmeta:</h5> 
+                </tr>
+                <tr *ngFor="let f of rokoviFajlovi">
+                    <h6>{{f.naziv}}</h6> veličina: {{f.velicina}}KB datum: {{f.datum}} tip:{{f.tip}} postavio: {{f.ime}} {{f.prezime}}
+                     <button (click)="downloadFile(f.naziv);" class="btn btn-outline-warning" style="margin-right: 10px;">Preuzmite</button>
+                    <button (click)="removeFile(f.naziv,'R');" class="btn btn-outline-warning" style="margin-right: 10px;">Uklonite</button>
+                    <button (click)="prioritetPlus(f.naziv,'R');" class="btn btn-outline-warning" style="margin-right: 10px;">+</button>
+                    <button (click)="prioritetMinus(f.naziv,'R');" class="btn btn-outline-warning">-</button>
+                    <hr/>
+                </tr>
+                <tr>
+                    Dodajte novi materijal:
+                    
+                    <input
+                    style="display: none"
+                    type="file" (change)="onFileChanged($event);onFileSelected($event)" name='file'
+                    #fileInput>
+
+
+                  <button (click)="fileInput.click()" class="btn btn-warning" style="margin-right: 30px; margin-left: 20px;">Izaberite fajl</button> 
+                  <button class="btn btn-danger" (click)="onUpload('R')">Upload</button>
+                  <span>{{filename}} {{upl}}</span>
+                </tr>
+            </table>
+          </div>
+          <div *ngIf="tab==5">
+            <table>
+                <tr>
+                    <h5>Možete uneti dodatne informacije o laboratoriji:</h5>
+                </tr>
+                <tr>
+                    <textarea rows="5" cols="60"  [(ngModel)]='dodatnoLab'></textarea>
+                </tr>
+                <tr>
+                    <button (click)="azurirajPredmetCeo()" class="btn btn-primary">Ažuriraj info</button>
+                </tr>
+                <tr>
+                   <h5>Materijali odabranog predmeta:</h5> 
+                </tr>
+                <tr *ngFor="let f of labFajlovi">
+                    <h6>{{f.naziv}}</h6> veličina: {{f.velicina}}KB datum: {{f.datum}} tip:{{f.tip}} postavio: {{f.ime}} {{f.prezime}}
+                     <button (click)="downloadFile(f.naziv);" class="btn btn-outline-warning" style="margin-right: 10px;">Preuzmite</button>
+                    <button (click)="removeFile(f.naziv,'L');" class="btn btn-outline-warning" style="margin-right: 10px;">Uklonite</button>
+                    <button (click)="prioritetPlus(f.naziv,'L');" class="btn btn-outline-warning" style="margin-right: 10px;">+</button>
+                    <button (click)="prioritetMinus(f.naziv,'L');" class="btn btn-outline-warning">-</button>
+                    <hr/>
+                </tr>
+                <tr>
+                    Dodajte novi materijal:
+                    
+                    <input
+                              style="display: none"
+                              type="file" (change)="onFileChanged($event);onFileSelected($event)" name='file'
+                              #fileInput>
+
+
+                            <button (click)="fileInput.click()" class="btn btn-warning" style="margin-right: 30px; margin-left: 20px;">Izaberite fajl</button> 
+                            <button class="btn btn-danger" (click)="onUpload('L')">Upload</button>
+                            <span>{{filename}} {{upl}}</span>
+                </tr>
+            </table>
+          </div>
+          <div *ngIf="tab==6">
+            <table>
+                <tr>
+                    <h5>Možete uneti dodatne informacije o projektu/domaćem:</h5>
+                </tr>
+                <tr>
+                    <textarea rows="5" cols="60"  [(ngModel)]='dodatnoDom'></textarea>
+                </tr>
+                <tr>
+                    <button (click)="azurirajPredmetCeo()" class="btn btn-primary">Ažuriraj info</button>
+                </tr>
+                <tr>
+                   <h5>Materijali za domaće zadatke:</h5> 
+                </tr>
+                <tr *ngFor="let f of domaciFajlovi">
+                    <h6>{{f.naziv}}</h6> veličina: {{f.velicina}}KB datum: {{f.datum}} tip:{{f.tip}} postavio: {{f.ime}} {{f.prezime}}
+                     <button (click)="downloadFile(f.naziv);" class="btn btn-outline-warning" style="margin-right: 10px;">Preuzmite</button>
+                    <button (click)="removeFile(f.naziv,'D');" class="btn btn-outline-warning" style="margin-right: 10px;">Uklonite</button>
+                    <button (click)="prioritetPlus(f.naziv,'D');" class="btn btn-outline-warning" style="margin-right: 10px;">+</button>
+                    <button (click)="prioritetMinus(f.naziv,'D');" class="btn btn-outline-warning">-</button>
+                    <hr/>
+                </tr>
+                <tr>
+                    Dodajte novi materijal:
+                    
+                    <input
+                    style="display: none"
+                    type="file" (change)="onFileChanged($event);onFileSelected($event)" name='file'
+                    #fileInput>
+
+
+                  <button (click)="fileInput.click()" class="btn btn-warning" style="margin-right: 30px; margin-left: 20px;">Izaberite fajl</button> 
+                  <button class="btn btn-danger" (click)="onUpload('D')">Upload</button>
+                  <span>{{filename}} {{upl}}</span>
+                </tr>
+            </table>
+          </div>
+          <div *ngIf="tab==7">
+            <h6>Ispitna pitanja</h6> <button (click)="aktivacija('I');" class="btn btn-danger" style="margin-right: 30px; margin-left: 20px;">Aktiviraj</button>
+                                    <button class="btn btn-danger" (click)="deaktivacija('I');">Deaktiviraj</button>
+            <br/><hr/>
+            <h6>Laboratorija</h6> <button (click)="aktivacija('L');" class="btn btn-danger" style="margin-right: 30px; margin-left: 20px;">Aktiviraj</button>
+            <button class="btn btn-danger" (click)="deaktivacija('L');">Deaktiviraj</button>
+            <br/><hr/>
+            <h6>Projekat/Domaći</h6> <button (click)="aktivacija('D');" class="btn btn-danger" style="margin-right: 30px; margin-left: 20px;">Aktiviraj</button>
+            <button class="btn btn-danger" (click)="deaktivacija('D');">Deaktiviraj</button>
+          </div>
+        
+        
+        </div>
+        <div *ngIf="sviPredmetiZap.length==0">
+            Niste angažovani na predmetima ovog odseka
+        </div>

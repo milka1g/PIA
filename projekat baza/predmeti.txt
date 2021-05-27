@@ -1,0 +1,942 @@
+/* 1 */
+{
+    "_id" : ObjectId("602ee5dde0798b34fc5b4d4f"),
+    "naziv" : "Matematika 1",
+    "tip" : "obavezni",
+    "odsek" : "si",
+    "semestar" : 1,
+    "godina" : 1,
+    "sifra" : "13S081M1",
+    "fond" : "3+3",
+    "espb" : 5,
+    "cilj" : "Upoznavanje studenata sa osnovama matematičke logike, opšte i linearne algebre i matematičke analize.",
+    "ishod" : "Student će lako prepoznavati probleme u stručnim predmetima i primenjivati stečeno znanje, posebno za rešavanje sistema linearnih jednačina i za približna izračunavanja i aproksimaciju funkcija koje se pojavljuju pri matematičkom modelovanju odgovarajućih problema",
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "četvrtak 15h", 
+        "sreda 15h"
+    ],
+    "vezbeTerm" : [ 
+        "ponedeljak 11h", 
+        "sreda 15h", 
+        "SUBOTA 88h"
+    ],
+    "dodatno" : "Ovo je dosadno",
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("602eead1e0798b34fc5b4dcb"),
+    "naziv" : "Osnovi elektronike",
+    "tip" : "obavezni",
+    "odsek" : "si",
+    "semestar" : 1,
+    "godina" : 1,
+    "sifra" : "13S041OE",
+    "fond" : "2+2+1",
+    "espb" : 5,
+    "cilj" : "Upoznavanje sa osnovnim konceptima elektrotehnike i elektronike. Upoznavanje sa osnovnim aktivnim i pasivnim elektronskim komponentama.Osnovne metode analize električnih i elektronskih kola.",
+    "ishod" : "Mogućnost samostalne analize jednostavnijih elektronskih kola i razumevanje funkcionisanja osnovnih elektronskih komponenti.",
+    "predavanjaTerm" : [ 
+        "utorak 8h", 
+        "četvrtak 16h"
+    ],
+    "vezbeTerm" : [ 
+        "utorak 11h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("602eeb94e0798b34fc5b4dfc"),
+    "naziv" : "Programiranje 2",
+    "tip" : "izborni",
+    "odsek" : "si",
+    "semestar" : 2,
+    "godina" : 1,
+    "sifra" : "13S111P2",
+    "fond" : "3+2",
+    "espb" : 5,
+    "cilj" : "Upoznavanje sa sintaksom i semantikom programskog jezika S. Primena naprednih koncepata proceduralnog programiranja u jeziku C.",
+    "ishod" : "Studenti će biti u stanju da: izračunaju vrednost realnog broja na osnovu prikaza po IEEE standardu i da računaju sa ovakvim brojevima, napišu složenije programe na jeziku C koji koriste operatore, kontrolne strukture i bibliotečke funkcije, upotrebe makroprocesorske direktive, kao i da razvijaju, testiraju i nadograđuju modularne programe koji koriste ulančane liste, stabla i datoteke.",
+    "predavanjaTerm" : [ 
+        "utorak 8h", 
+        "četvrtak 16h"
+    ],
+    "vezbeTerm" : [ 
+        "utorak 11h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [ 
+        "predavanje1_P2.pdf", 
+        "predavanje2_P2.pdf", 
+        "predavanje3_P2.pdf"
+    ],
+    "vezbeMat" : [ 
+        "vezbe1_P2.txt", 
+        "vezbe2_P2.txt"
+    ],
+    "ispitniRokovi" : [ 
+        "rezultati_klk_P2.docx", 
+        "februar2009.pdf", 
+        "resenje_feb2009.pdf", 
+        "rezultati_ispit_P2.docx"
+    ],
+    "laboratorija" : [],
+    "dodatnoLab" : "Ovo je jako zanimljiv predmet ucimo Pascal, ovaj C++, C ipak.. Ali nema labova! Za to imate PP2!"
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("602eebcce0798b34fc5b4e15"),
+    "naziv" : "Sociologija",
+    "tip" : "izborni",
+    "odsek" : "si",
+    "semestar" : 1,
+    "godina" : 1,
+    "sifra" : "13S091S",
+    "fond" : "1+1",
+    "espb" : 2,
+    "cilj" : "Opšta sociologija pruža studentima osnovna saznanja o nizu osnovnih kategorija i pojmova kao što su nauka i naučni zakoni, osnove metodologije socioloških istraživanja, nastanak i razvoj misli o društvu, itd.",
+    "ishod" : "Izučavanjem opšte sociologije studenti će biti osposobljeni da razumeju osnovne kategorije, pojmove i procese koji se dešavaju u savremenom društvu.",
+    "predavanjaTerm" : [ 
+        "sreda 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 10h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("602eec3be0798b34fc5b4e3a"),
+    "naziv" : "Algoritmi i strukture podataka",
+    "tip" : "obavezni",
+    "odsek" : "si",
+    "semestar" : 2,
+    "godina" : 1,
+    "sifra" : "13S111ASP1",
+    "fond" : "2+2+1",
+    "espb" : 5,
+    "cilj" : "Upoznavanje sa logičkom organizacijom i memorijskom reprezentacijom linearnih i nelinearih struktura podataka, osnovnim operacijama i tipičnim primenama ovih struktura.",
+    "ishod" : "Ovaj predmet treba studenta da osposobi za programsku implementaciju linearnih i nelineranih struktura, kao i algoritama za rad sa njima u tipičnim primenama.",
+    "predavanjaTerm" : [ 
+        "sreda 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 10h", 
+        "petak 15h"
+    ],
+    "dodatno" : "HEEEEEEJ",
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("602eec8ee0798b34fc5b4e5a"),
+    "naziv" : "Baze podataka 1",
+    "tip" : "obavezni",
+    "odsek" : "si",
+    "semestar" : 1,
+    "godina" : 2,
+    "sifra" : "13S112BP1",
+    "fond" : "2+2+1",
+    "espb" : 6,
+    "cilj" : "Upoznavanje studenata sa osnovnim pojmovima i principima Sistema za Upravljanje Bazama Podataka.",
+    "ishod" : "Osposobljenost studenata za dizajn i implementaciju konkretne baze podataka i korišćenje komercijalnih sistema za upravljanje bazama podataka.",
+    "predavanjaTerm" : [ 
+        "sreda 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 10h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("602eeccfe0798b34fc5b4e6b"),
+    "naziv" : "Signali i sistemi",
+    "tip" : "izborni",
+    "odsek" : "si",
+    "semestar" : 1,
+    "godina" : 2,
+    "sifra" : "13S052SIS",
+    "fond" : "3+1+1",
+    "espb" : 6,
+    "cilj" : "Upoznavanje studenata sa osnovama modeliranja kontinualnih i diskretnih sistema i karakterizacijom kontinualnih i diskretnih signala.",
+    "ishod" : "Studenti će nakon položenog predeta imati osnovne veštine da klasifikuju i analiziraju izmerene eksperimentalne podatke",
+    "predavanjaTerm" : [ 
+        "sreda 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 10h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 8 */
+{
+    "_id" : ObjectId("602eed48e0798b34fc5b4e9f"),
+    "naziv" : "Operativni sistemi 1",
+    "tip" : "obavezni",
+    "odsek" : "si",
+    "semestar" : 2,
+    "godina" : 2,
+    "sifra" : "13S112OS1",
+    "fond" : "2+2+1",
+    "espb" : 6,
+    "cilj" : "Upoznati studente sa namenom i funkcijama operativnih sistema, kao i osnovnim principima funkcionisanja, projektovanja i implementacije operativnih sistema.",
+    "ishod" : "Steći osnovna znanja o konceptima, algoritmima, principima, problemima i rešenjima vezanim za operativne sisteme uopšte, nevezano ni za jedan konkretan operativni sistem. ",
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "sreda 8h"
+    ],
+    "vezbeTerm" : [ 
+        "utorak 10h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 9 */
+{
+    "_id" : ObjectId("602eed92e0798b34fc5b4eb6"),
+    "naziv" : "Veb dizajn",
+    "tip" : "izborni",
+    "odsek" : "si",
+    "semestar" : 2,
+    "godina" : 2,
+    "sifra" : "13S112VD",
+    "fond" : "2+2+1",
+    "espb" : 6,
+    "cilj" : "Upoznavanje studenata sa načinima realizacije kompleksnih klijentskih Veb stranica. Definisanje osnovnih principa grafičkog dizajna i primena u okviru korisničkog interfejsa Internet aplikacija. ",
+    "ishod" : "Osposobljavanje studenata za samostalnu izradu kompleksne klijentske Veb aplikacije. Poznavanje opštih principa grafičkog dizajna, izrade naprednih korisničkih interfejsa, osobine uspešnog Veb dizajna.",
+    "predavanjaTerm" : [ 
+        "sreda 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 10h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 10 */
+{
+    "_id" : ObjectId("602efdabe0798b34fc5b5114"),
+    "naziv" : "Programski prevodioci 1",
+    "tip" : "obavezni",
+    "odsek" : "si",
+    "semestar" : 7,
+    "godina" : 4,
+    "sifra" : "13S114PP1",
+    "fond" : "3+2+1",
+    "espb" : 6,
+    "cilj" : "Cilj predmeta je upoznavanje studenata sa osnovnim pojmovima teorije formalnih jezika, sa osnovnim tehnikama konstrukcije jezičkih procesora, kompajlera i interpretatora",
+    "ishod" : "Očekuje se da student po završetku kursa bude u stanju da: Demonstrira razumevanje, kritičku analizu i primenu važećih teorija",
+    "predavanjaTerm" : [ 
+        "sreda 8h", 
+        "petak 8h", 
+        "subota 10h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 10h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [ 
+        "PP1 P3.txt", 
+        "PP1 M1.pdf"
+    ],
+    "vezbeMat" : [ 
+        "PP1 P1.txt", 
+        "heart.jpg", 
+        "PP1 P2.txt"
+    ],
+    "ispitniRokovi" : [ 
+        "PP1 P3.txt", 
+        "heart.jpg"
+    ],
+    "laboratorija" : [ 
+        "heart.jpg", 
+        "PP1 P2.txt"
+    ],
+    "dodatnoLab" : "Pa evo gospodjo nemanista bas"
+}
+
+/* 11 */
+{
+    "_id" : ObjectId("602efe19e0798b34fc5b5140"),
+    "naziv" : "Projektovanje softvera",
+    "tip" : "obavezni",
+    "odsek" : "si",
+    "semestar" : 5,
+    "godina" : 3,
+    "sifra" : "13S113PS",
+    "fond" : "2+2+1",
+    "espb" : 6,
+    "cilj" : "Razumevanje i ovladavanje konceptima modeliranja i projektovanja softvera korišćenjem projektnih uzoraka. Upoznavanje standardne grafičke notacije za modeliranje softvera",
+    "ishod" : "Student poznaje koncepte modeliranja i projektovanja softvera.",
+    "predavanjaTerm" : [ 
+        "sreda 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 10h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 12 */
+{
+    "_id" : ObjectId("602fa555e0798b34fc5b5436"),
+    "naziv" : "Osnovi elektrotehnike 1",
+    "tip" : "obavezni",
+    "odsek" : "rti",
+    "semestar" : 1,
+    "godina" : 1,
+    "sifra" : "19E071OE1",
+    "fond" : "3+3",
+    "espb" : 6,
+    "cilj" : "Upoznavanje sa osnovnim konceptima, jednačinama i metodima analize elektrostatičkih polja i strujnih polja. Uvođenje u koncepte, metode analize i teoreme električnih kola stalnih struja.",
+    "ishod" : "Osposobljavanje studenata za analitičko rešavanje praktičnih problema elektrostatičkih polja i ovladavanje metodima za efikasno rešavanje složenih linearnih električnih kola stalnih struja.",
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "sreda 10h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 8h", 
+        "sreda 10h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 13 */
+{
+    "_id" : ObjectId("602fa555e0798b34fc5b5439"),
+    "naziv" : "Programiranje 2",
+    "tip" : "obavezni",
+    "odsek" : "rti",
+    "semestar" : 2,
+    "godina" : 1,
+    "sifra" : "19E111P2",
+    "fond" : "3+2",
+    "espb" : 6,
+    "cilj" : "Upoznavanje sa sintaksom i semantikom programskog jezika C.",
+    "ishod" : "Studenti će moći da: konstruišu algoritme za rešavanje zadatih problema, napišu složenije programe na jeziku C koji koriste operatore",
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 8h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 14 */
+{
+    "_id" : ObjectId("602fa555e0798b34fc5b543c"),
+    "naziv" : "Numerička analiza i diskretna matematika",
+    "tip" : "obavezni",
+    "odsek" : "rti",
+    "semestar" : 3,
+    "godina" : 2,
+    "sifra" : "13E082NAD",
+    "fond" : "3+2",
+    "espb" : 6,
+    "cilj" : "Upoznavanje studenata sa principima numeričke matematike i diskretne matematike, načinima odabira odgovarajućih metoda u zavisnosti od prirode problema sa primenom u elektrotehnici i računarstvu.",
+    "ishod" : "Studenti su osposobljeni da primenjuju algoritme numeričke matematike i metode diskretne matematike u stručnim predmetima.",
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 8h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 15 */
+{
+    "_id" : ObjectId("602fa555e0798b34fc5b543f"),
+    "naziv" : "Osnovi računarske tehnike 2",
+    "tip" : "obavezni",
+    "odsek" : "rti",
+    "semestar" : 3,
+    "godina" : 2,
+    "sifra" : "13E112ORT2",
+    "fond" : "2+2+1",
+    "espb" : 6,
+    "cilj" : "UUpoznavanje sa postupcima projektovanja digitalnih sistema, strukturom računara, i elementima arhitekture i organizacije procesora",
+    "ishod" : "Po završetku kursa studenti će biti sposobni da razumeju: postupak projektovanja digitalnih sistema; strukturu računara; elemente arhitekture i organizacije računara",
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 8h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 16 */
+{
+    "_id" : ObjectId("602fa555e0798b34fc5b5442"),
+    "naziv" : "Arhitektura računara",
+    "tip" : "obavezni",
+    "odsek" : "rti",
+    "semestar" : 4,
+    "godina" : 2,
+    "sifra" : "13E112AR",
+    "fond" : "2+2+1",
+    "espb" : 6,
+    "cilj" : "Upoznavanje sa konceptima CISC i RISC arhitekture, i strukturom magistrale, ulazno/izlaznog sistema i sistema diskova.",
+    "ishod" : "Po završetku kursa studenti će biti sposobni da: razumeju strukturu i funkcionisanje procesora SICS i RISC, magistrale, ulazno/izlaznog sistema i sistema diskova; koriste literaturu radi daljeg izučavanja ovih oblasti.",
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 8h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [ 
+        "predavanje1_AR.pdf", 
+        "predavanje2_AR.pdf", 
+        "predavanje3_AR.pdf"
+    ],
+    "vezbeMat" : [ 
+        "vezbe1_AR.txt", 
+        "vezbe2_AR.txt"
+    ],
+    "ispitniRokovi" : [ 
+        "februar2019.pdf", 
+        "resenje_feb2019.pdf", 
+        "rezultati_ispit_AR.docx", 
+        "rezultati_klk_AR.docx"
+    ],
+    "laboratorija" : [ 
+        "lab1AR.pdf", 
+        "lab2AR.pdf"
+    ],
+    "dodatnoLab" : "Super labovi 5x4p znaci free 20p jer naucite napamet sve!"
+}
+
+/* 17 */
+{
+    "_id" : ObjectId("602fa555e0798b34fc5b5445"),
+    "naziv" : "Konkurentno i distribuirano programiranje",
+    "tip" : "obavezni",
+    "odsek" : "rti",
+    "semestar" : 5,
+    "godina" : 3,
+    "sifra" : "13E113KDP",
+    "fond" : "2+2+1",
+    "espb" : 6,
+    "cilj" : "Upoznavanje studenata sa osnovnim konceptima konkurentnog i distribuiranog programiranja.",
+    "ishod" : "Posedovanje osnovnih znanja o konceptima, algoritmima, principima, problemima i rešenjima vezanim za konkurentno i distribuirano programiranja.",
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 8h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 18 */
+{
+    "_id" : ObjectId("602fa555e0798b34fc5b5448"),
+    "naziv" : "Programiranje internet aplikacija",
+    "tip" : "obavezni",
+    "odsek" : "rti",
+    "semestar" : 6,
+    "godina" : 3,
+    "sifra" : "13E113PIA",
+    "fond" : "2+2+1",
+    "espb" : 6,
+    "cilj" : "Upoznavanje studenata sa osnovnim pojmovima razvoja višeslojnih Internet aplikacija baziranih na programskom jeziku Java ",
+    "ishod" : "Studenti će biti osposobljeni da projektuju i razviju višeslojne Internet aplikacije potrebne složenosti koristeći najefikasnije metode",
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 8h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 19 */
+{
+    "_id" : ObjectId("602fa555e0798b34fc5b544b"),
+    "naziv" : "Mikroprocesorski sistemi",
+    "tip" : "obavezni",
+    "odsek" : "rti",
+    "semestar" : 7,
+    "godina" : 4,
+    "sifra" : "13E114MIPS",
+    "fond" : "2+2+1",
+    "espb" : 6,
+    "cilj" : "Upoznavanje sa naprednim mogućnostima savremenih mikroprocesora",
+    "ishod" : "Očekuje se da će studenti nakon ovoga kursa biti sposobni da: - za zadati problem osmisle i dizajniraju potrebni hardver",
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 8h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 20 */
+{
+    "_id" : ObjectId("602fb699e0798b34fc5b59ab"),
+    "naziv" : "Objektno-orijentisano programiranje 1",
+    "tip" : "obavezni",
+    "odsek" : "ostali",
+    "semestar" : 1,
+    "godina" : 1,
+    "sifra" : "13E112OO1",
+    "fond" : "2+2+1",
+    "espb" : 6,
+    "cilj" : "Razumevanje i ovladavanje osnovnim principima objektno-orijentisanog programiranja, kao što su apstrakcija, kapsulacija, nasleđivanje i polimorfizam.",
+    "ishod" : "Po uspešno savladanom predmetu, studenti će biti osposobljeni da: - interpretiraju i primenjuju paradigmu objektno-orijentisanog programiranja",
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 8h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 21 */
+{
+    "_id" : ObjectId("602fb699e0798b34fc5b59ae"),
+    "naziv" : "Random predmet 1",
+    "tip" : "obavezni",
+    "odsek" : "ostali",
+    "semestar" : 2,
+    "godina" : 1,
+    "sifra" : "13E112RP1",
+    "fond" : "2+2+1",
+    "espb" : 6,
+    "cilj" : "Random cilj. Random cilj. Random cilj. Random cilj.",
+    "ishod" : "Random ishod. Random ishod. Random ishod. Random ishod. Random ishod. ",
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 8h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 22 */
+{
+    "_id" : ObjectId("602fb699e0798b34fc5b59b1"),
+    "naziv" : "Random predmet 2",
+    "tip" : "obavezni",
+    "odsek" : "ostali",
+    "semestar" : 3,
+    "godina" : 2,
+    "sifra" : "13E112RP2",
+    "fond" : "2+2+1",
+    "espb" : 6,
+    "cilj" : "Random cilj. Random cilj. Random cilj. Random cilj.",
+    "ishod" : "Random ishod. Random ishod. Random ishod. Random ishod. Random ishod. ",
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 8h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 23 */
+{
+    "_id" : ObjectId("602fb699e0798b34fc5b59b4"),
+    "naziv" : "Random predmet 3",
+    "tip" : "obavezni",
+    "odsek" : "ostali",
+    "semestar" : 4,
+    "godina" : 2,
+    "sifra" : "13E112RP3",
+    "fond" : "2+2+1",
+    "espb" : 6,
+    "cilj" : "Random cilj. Random cilj. Random cilj. Random cilj.",
+    "ishod" : "Random ishod. Random ishod. Random ishod. Random ishod. Random ishod. ",
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 8h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 24 */
+{
+    "_id" : ObjectId("602fb699e0798b34fc5b59b7"),
+    "naziv" : "Random predmet 4",
+    "tip" : "obavezni",
+    "odsek" : "ostali",
+    "semestar" : 5,
+    "godina" : 3,
+    "sifra" : "13E112RP4",
+    "fond" : "2+2+1",
+    "espb" : 6,
+    "cilj" : "Random cilj. Random cilj. Random cilj. Random cilj.",
+    "ishod" : "Random ishod. Random ishod. Random ishod. Random ishod. Random ishod. ",
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 8h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 25 */
+{
+    "_id" : ObjectId("602fb699e0798b34fc5b59ba"),
+    "naziv" : "Random predmet 5",
+    "tip" : "obavezni",
+    "odsek" : "ostali",
+    "semestar" : 6,
+    "godina" : 3,
+    "sifra" : "13E112RP5",
+    "fond" : "2+2+1",
+    "espb" : 6,
+    "cilj" : "Random cilj. Random cilj. Random cilj. Random cilj.",
+    "ishod" : "Random ishod. Random ishod. Random ishod. Random ishod. Random ishod. ",
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 8h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 26 */
+{
+    "_id" : ObjectId("60338030ee50d799cf478452"),
+    "naziv" : "Programiranje korisničkih interfejsa",
+    "tip" : "izborni",
+    "odsek" : "master",
+    "semestar" : 1,
+    "godina" : 1,
+    "sifra" : "13M111PKI",
+    "fond" : "2+2+1",
+    "espb" : 6,
+    "cilj" : "Upoznavanje sa principima razvoja korisničkog interfejsa na osnovu dizajna (mogućnosti čoveka, analize zadataka, principima grafičkog dizajna), analiza upotrebe interfejsa, implementacije",
+    "ishod" : "Isto kao teorijska nastava. Veliki broj primera iz prakse dobrog i lošeg dizajna. Implementacija predavanih tehnika korišćenjem različitih programskih tehnologija uključujući JavaFx platformu i Android.",
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 8h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 27 */
+{
+    "_id" : ObjectId("60338030ee50d799cf478455"),
+    "naziv" : "Teorija algoritama",
+    "tip" : "izborni",
+    "odsek" : "master",
+    "semestar" : 1,
+    "godina" : 1,
+    "sifra" : "13M111TA",
+    "fond" : "2+2",
+    "espb" : 6,
+    "cilj" : "Algoritmi i strukture podataka. Analiza i implementacija algoritama. Napredne strukture podataka. ",
+    "ishod" : "Demonstracija rada algoritama u vizuelnim simulacionim okruženjima. Rešavanje praktičnih problema i zadataka.",
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 8h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 28 */
+{
+    "_id" : ObjectId("60338030ee50d799cf478458"),
+    "naziv" : "Projektovanje softvera",
+    "tip" : "izborni",
+    "odsek" : "master",
+    "semestar" : 1,
+    "godina" : 1,
+    "sifra" : "13E114PS",
+    "fond" : "2+2+1",
+    "espb" : 6,
+    "cilj" : "Razumevanje i ovladavanje konceptima modeliranja i projektovanja softvera korišćenjem projektnih uzoraka. Učenje standardne grafičke notacije za modeliranje UML kroz 13 vrsta dijagrama",
+    "ishod" : "Student poznaje koncepte modeliranja i projektovanja softvera. Student je sposoban je da modelira složene softverske sisteme koristeći standardni jezik UML 2.",
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 8h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 29 */
+{
+    "_id" : ObjectId("60338030ee50d799cf47845b"),
+    "naziv" : "Programiranje u realnom vremenu",
+    "tip" : "izborni",
+    "odsek" : "master",
+    "semestar" : 2,
+    "godina" : 1,
+    "sifra" : "13M111PRV",
+    "fond" : "2+2+1",
+    "espb" : 6,
+    "cilj" : "Steći teorijsko znanje i praktične veštine potrebne za analizu, projektovanje i implementaciju softverskih sistema za rad u realnom vremenu (RT). ",
+    "ishod" : "Poznavanje osnovnih koncepata i principa sistema za rad u realnom vremenu. Sposobnost analize, projektovanja i realizacije softvera za ove sisteme.",
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 8h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 30 */
+{
+    "_id" : ObjectId("60338030ee50d799cf47845e"),
+    "naziv" : "Programski prevodioci 2",
+    "tip" : "izborni",
+    "odsek" : "master",
+    "semestar" : 2,
+    "godina" : 1,
+    "sifra" : "13M111PP2",
+    "fond" : "2+2+1",
+    "espb" : 6,
+    "cilj" : "Napredne tehnike leksičke i sintaksne analize GLR. Oporavak od grešaka u parsiranju. Napredno generisanje međukoda SSA. Izvršno okruženje:strategije dodele i oslobađanja memorije, virtuelne mašine. ",
+    "ishod" : "Auditorne vežbe koje ilustruju pojedine koncepte i tehnike obrađene na predavanjima. Praktičan projekat implementacije zadatog algoritma iz oblasti konstrukcije prevodioca koji student samostalno izrađuje.",
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 8h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 31 */
+{
+    "_id" : ObjectId("60338030ee50d799cf478461"),
+    "naziv" : "Funkcionalno programiranje",
+    "tip" : "izborni",
+    "odsek" : "master",
+    "semestar" : 2,
+    "godina" : 1,
+    "sifra" : "13M111FP",
+    "fond" : "2+2+1",
+    "espb" : 6,
+    "cilj" : "Razumevanje i ovladavanje konceptima funkcionalnog programiranja kroz jezik Scala. Specifičnosti strukture programa kod funkcionalnog programiranja i razlika u odnosu na imperativno programiranje. ",
+    "ishod" : "Po uspešno savladanom predmetu, studenti će biti osposobljeni da: - razumeju specifičnosti funkcionalnog programiranja - pišu sekvencijalne ili paralelne funkcionalne programe u jeziku Scala ",
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "petak 8h"
+    ],
+    "vezbeTerm" : [ 
+        "sreda 8h", 
+        "petak 15h"
+    ],
+    "dodatno" : null,
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : []
+}
+
+/* 32 */
+{
+    "_id" : ObjectId("60365e156c279023ace53bdc"),
+    "predavanjaTerm" : [ 
+        "ponedeljak 8h", 
+        "sreda 8h"
+    ],
+    "vezbeTerm" : [ 
+        "utorak 10h", 
+        "cetvrtak 11h"
+    ],
+    "predavanjaMat" : [],
+    "vezbeMat" : [],
+    "ispitniRokovi" : [],
+    "laboratorija" : [],
+    "naziv" : "Računarske mreže 1",
+    "tip" : "obavezni",
+    "odsek" : "si",
+    "semestar" : 4,
+    "godina" : 2,
+    "sifra" : "13S112RM1",
+    "fond" : "2+2+1",
+    "espb" : 6,
+    "cilj" : "Upoznavanje studenata sa osnovnim konceptima savremenih računarskih mreža i komunikacionih protokola.",
+    "ishod" : "Predmet nudi široku predstavu računarskih mreža uopšte, bazirano na komunikacionim protokolima na različitim nivoima (od nižeg ka višem).",
+    "dodatno" : "Nista specijalno",
+    "__v" : 0
+}

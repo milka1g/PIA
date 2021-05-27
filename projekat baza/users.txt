@@ -1,0 +1,248 @@
+/* 1 */
+{
+    "_id" : ObjectId("60299cb6e0798b34fc5acb63"),
+    "username" : "bojic",
+    "mail" : "bojic@etf.bg.ac.rs",
+    "password" : "bojic123",
+    "pwchg" : 1,
+    "name" : "Dragan",
+    "lastname" : "Bojic",
+    "address" : "Bulevar Neki 23, Beograd",
+    "phone" : "064273340",
+    "title" : "redovni profesor",
+    "office" : "Paviljon Rasovic, kancelarija P-23",
+    "status" : "active",
+    "picture" : null,
+    "bio" : "Ja sam dosadan profesor jako",
+    "website" : "boki.com",
+    "type" : "Z",
+    "predmeti" : []
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("60299cb6e0798b34fc5acb66"),
+    "username" : "adri",
+    "mail" : "adri@etf.bg.ac.rs",
+    "password" : "adri123",
+    "pwchg" : 1,
+    "name" : "Adrijan",
+    "lastname" : "MilakovicK",
+    "address" : "Bosanska 56, Beograd",
+    "phone" : "+381694553587",
+    "title" : "docent",
+    "office" : null,
+    "status" : "active",
+    "picture" : null,
+    "bio" : "Ja sam isao u Devetu gimnaziju i ne znam zasto radim ovaj posao",
+    "website" : null,
+    "type" : "Z",
+    "predmeti" : []
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("60299cb6e0798b34fc5acb69"),
+    "username" : "isus",
+    "mail" : "isus@etf.bg.ac.rs",
+    "password" : "isus123",
+    "pwchg" : 1,
+    "name" : "Isus",
+    "lastname" : "Milosevic",
+    "address" : "Blagoja Jovovica 56, Beograd",
+    "phone" : "+381694553587",
+    "title" : "laboratorijski tehnicar",
+    "office" : null,
+    "status" : "active",
+    "picture" : null,
+    "bio" : "Jako volim da studentima ne omogucim da koriste USB, to mi je bio master rad",
+    "website" : null,
+    "type" : "Z",
+    "predmeti" : []
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("60299cb6e0798b34fc5acb6c"),
+    "username" : "mn170387d@student.etf.rs",
+    "mail" : "2017/0387",
+    "password" : "nikola123",
+    "pwchg" : 2,
+    "name" : "Nikola",
+    "lastname" : "Milicevic",
+    "address" : null,
+    "phone" : null,
+    "title" : "d",
+    "office" : null,
+    "status" : "active",
+    "picture" : null,
+    "bio" : null,
+    "website" : null,
+    "type" : "S",
+    "predmeti" : [ 
+        "13S111P2"
+    ]
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("60299cb6e0798b34fc5acb6f"),
+    "username" : "mu150387p@student.etf.rs",
+    "mail" : "2015/1389",
+    "password" : "legija123",
+    "pwchg" : 1,
+    "name" : "Milorad",
+    "lastname" : "Ulemek",
+    "address" : null,
+    "phone" : null,
+    "title" : "p",
+    "office" : null,
+    "status" : "inactive",
+    "picture" : null,
+    "bio" : "Milorad Ulemek Legija (rođen 15. OZULJKA AXXA 1968. u Beogradu) je bivši pripadnik francuske Legije stranaca (u istoj poznat kao Brasil), član Srpske dobrovoljačke garde (poznat kao Legija), vojnik a zatim i zapovjednik Crvenih beretki.",
+    "website" : null,
+    "type" : "S",
+    "predmeti" : []
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("602b8ca5e0798b34fc5acf2c"),
+    "username" : "admin",
+    "mail" : "admin@etf.bg.ac.rs",
+    "password" : "admin123",
+    "pwchg" : 1,
+    "name" : "Admin",
+    "lastname" : "Adminic",
+    "address" : "Adresa faksa",
+    "phone" : null,
+    "title" : "admin",
+    "office" : null,
+    "status" : "active",
+    "picture" : null,
+    "bio" : null,
+    "website" : null,
+    "type" : "A",
+    "predmeti" : []
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("602d2debc4ee5e0270161ebf"),
+    "username" : "ca170365d@student.etf.rs",
+    "mail" : "2017/0365",
+    "password" : "colovic12",
+    "pwchg" : 1,
+    "name" : "Aleksa",
+    "lastname" : "colovic",
+    "address" : null,
+    "phone" : null,
+    "title" : "d",
+    "office" : null,
+    "status" : "active",
+    "picture" : null,
+    "bio" : null,
+    "website" : null,
+    "type" : "S",
+    "__v" : 0,
+    "predmeti" : []
+}
+
+/* 8 */
+{
+    "_id" : ObjectId("603422e7a4daf21b68764e98"),
+    "username" : "zp170388m@student.etf.rs",
+    "mail" : "2017/0388",
+    "password" : "zile123",
+    "pwchg" : 0,
+    "name" : "predrag",
+    "lastname" : "zivkovic",
+    "title" : "m",
+    "status" : "inactive",
+    "type" : "S",
+    "__v" : 0,
+    "predmeti" : []
+}
+
+/* 9 */
+{
+    "_id" : ObjectId("6037a0caf1d5ca3b70e0b39a"),
+    "predmeti" : [],
+    "username" : "ziza",
+    "mail" : "ziza@etf.bg.ac.rs",
+    "password" : "ziza12",
+    "pwchg" : 1,
+    "name" : "Kristijan",
+    "lastname" : "Ziza",
+    "address" : "Bulevar Podrum",
+    "phone" : "123456789",
+    "title" : "saradnik u nastavi",
+    "status" : "active",
+    "bio" : "Ne znam sta bih rekao stvarno.",
+    "website" : "ziza.com",
+    "type" : "Z",
+    "__v" : 0
+}
+
+/* 10 */
+{
+    "_id" : ObjectId("6038d187df5efd0aa886137b"),
+    "predmeti" : [],
+    "username" : "milo",
+    "mail" : "milo@etf.bg.ac.rs",
+    "password" : "milo12",
+    "pwchg" : 1,
+    "name" : "Milo",
+    "lastname" : "Tomasevic",
+    "address" : "Fakultetska 4",
+    "phone" : "011/3218-302",
+    "title" : "redovni profesor",
+    "office" : "Kabinet 234",
+    "status" : "active",
+    "bio" : "Doktor profesor 89god, situiran",
+    "website" : "milo.com",
+    "type" : "Z",
+    "__v" : 0
+}
+
+/* 11 */
+{
+    "_id" : ObjectId("6038d1eddf5efd0aa886137d"),
+    "predmeti" : [],
+    "username" : "misic",
+    "mail" : "misic@etf.bg.ac.rs",
+    "password" : "misic123",
+    "pwchg" : 0,
+    "name" : "Marko",
+    "lastname" : "Misic",
+    "address" : "Bulevar Podrum 5",
+    "phone" : "011/3218-302",
+    "title" : "vanredni profesor",
+    "office" : "Kabinet nemam",
+    "status" : "active",
+    "bio" : "Uf ja zadajem teske domace da bih mogao da testiram svoj program za slicnost kad svi kupe isti domaci haHAa",
+    "type" : "Z",
+    "__v" : 0
+}
+
+/* 12 */
+{
+    "_id" : ObjectId("6038d809df5efd0aa886138d"),
+    "predmeti" : [],
+    "username" : "zaharije",
+    "mail" : "zaharije@etf.bg.ac.rs",
+    "password" : "zaharije12",
+    "pwchg" : 1,
+    "name" : "Zaharije",
+    "lastname" : "Radivojevic",
+    "address" : "Fakultetska 88",
+    "phone" : "0642344567",
+    "title" : "redovni profesor",
+    "office" : "Kabinet 1234",
+    "status" : "active",
+    "type" : "Z",
+    "__v" : 0,
+    "bio" : "Ja sam car",
+    "picture" : null,
+    "website" : null
+}

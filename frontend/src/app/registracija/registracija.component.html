@@ -1,0 +1,80 @@
+<div id="page-container">
+    <div id="content-wrap">
+        <app-header></app-header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                        
+                    <!-- CONTENT HERE-->
+
+                    <table>
+                        <tr>
+                            <td>Korisničko ime:</td>
+                            <td>
+                                <input type='text' name='kor_ime' [(ngModel)]='username' placeholder="PIGGBBBBx@student.etf.rs">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Lozinka:</td>
+                            <td>
+                                <input type='password' name='lozinka1' [(ngModel)]='password1'>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Lozinka:</td>
+                            <td>
+                                <input type='password' name='lozinka2' [(ngModel)]='password2'>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Indeks:</td>
+                            <td>
+                                <input type='text' name='index' [(ngModel)]='index' placeholder="GGGG/BBBB">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tip studija:</td>
+                            <td>
+                                <input type="radio" id="d" name="gender" value="d" [(ngModel)]='title'>
+                                <label for="d">Osnovne akademske</label><br>
+                                <input type="radio" id="m" name="gender" value="m" [(ngModel)]='title'>
+                                <label for="m">Master akademske</label><br>
+                                <input type="radio" id="p" name="gender" value="p" [(ngModel)]='title'>
+                                <label for="p">Doktorske studije</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ime:</td>
+                            <td>
+                                <input type='text' name='ime' [(ngModel)]='name'>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Prezime:</td>
+                            <td>
+                                <input type='text' name='prezime' [(ngModel)]='lastname'>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Status:</td>
+                            <td>
+                                <select name="status" id="status" [(ngModel)]='status'>
+                                    <option value="active">Aktivan</option>
+                                    <option value="inactive">Neaktivan</option>
+                                  </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan='2'>
+                                <input type=button value="Registrujte se" class="btn btn-primary" (click)='registracija()'>
+                            </td>
+                        </tr>
+                    </table>
+                    <span class='greska' style="color: darkred;">{{msg}}<br></span>  
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <footer id="footer"> Copyright Nikola Milicevic - ETF SI 2021</footer>
+  </div>

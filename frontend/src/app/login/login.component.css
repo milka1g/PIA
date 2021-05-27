@@ -1,0 +1,16 @@
+a:hover {
+    color: darkblue;
+  }
+
+  a:active {
+    color:green  
+}
+
+  a:link{
+      color:black;
+  }
+
+  a{
+      color:darkblue;
+      font-size: large;
+  }

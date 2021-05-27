@@ -1,0 +1,488 @@
+<div id="page-container">
+    <div id="content-wrap">
+        <app-header></app-header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 cent">
+                    <h3>Dodavanje korisnika</h3>
+                    Vrsta korisnika:*
+                         <input type="radio" [(ngModel)]='type' value="S" name="tip">Student
+                            <input type="radio" [(ngModel)]='type' value="Z" name="tip">Zaposleni
+                            
+                    <table>
+                        <div *ngIf="type=='S'">
+                            <tr>
+                                <td>Korisničko ime:*</td>
+                                <td><input type='text' name='username' [(ngModel)]='username' placeholder="piGGBBBBx@student.etf.rs"></td>
+                            </tr>
+                            <tr>
+                                <td>Indeks:*</td>
+                                <td><input type='text' name='mail' [(ngModel)]='mail' placeholder="GGGG/BBBB"></td>
+                            </tr>
+                            <tr>
+                                <td>Tip studija:*</td>
+                                <td>
+                                    <input type="radio" [(ngModel)]='title' value="d" name="tip_studija">Osnovne
+                                    <input type="radio" [(ngModel)]='title' value="m" name="tip_studija">Master
+                                    <input type="radio" [(ngModel)]='title' value="p" name="tip_studija">Doktorske
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Lozinka:*</td>
+                                <td><input type='text' name='lozinka' [(ngModel)]='password'></td>
+                            </tr>
+                            <tr>
+                                <td>Ime:*</td>
+                                <td><input type='text' name='name' [(ngModel)]='name'></td>
+                            </tr>
+                            <tr>
+                                <td>Prezime:*</td>
+                                <td><input type='text' name='lastname' [(ngModel)]='lastname'></td>
+                            </tr>
+                            <tr>
+                                <td>Status:*</td>
+                                <td> <input type="radio" [(ngModel)]='status' value="active">Aktivan
+                                    <input type="radio" [(ngModel)]='status' value="inactive">Neaktivan
+                                </td>
+                            </tr>
+                        </div>
+
+                        <div *ngIf="type=='Z'">
+                            <tr>
+                                <td>Korisničko ime:* </td>
+                                <td><input type='text' name='username' [(ngModel)]='username'></td>
+                            </tr>
+                            <tr>
+                                <td>Lozinka:*</td>
+                                <td><input type='text' name='lozinka' [(ngModel)]='password'></td>
+                            </tr>
+                            <tr>
+                                <td>Zvanje:*</td>
+                                <td>
+                                    <select name="titula" [(ngModel)]='title'>
+                                        <option value="redovni profesor">Redovni profesor</option>
+                                        <option value="vanredni profesor">Vanredni profesor</option>
+                                        <option value="docent">Docent</option>
+                                        <option value="asistent">Asistent</option>
+                                        <option value="saradnik u nastavi">Saradnik u nastavi</option>
+                                        <option value="istrazivac">Istraživač</option>
+                                        <option value="laboratorijski inzenjer">Laboratorijski inženjer</option>
+                                        <option value="laboratorijski tehnicar">Laboratorijski tehničar</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ime:*</td>
+                                <td><input type='text' name='name' [(ngModel)]='name'></td>
+                            </tr>
+                            <tr>
+                                <td>Prezime:*</td>
+                                <td><input type='text' name='lastname' [(ngModel)]='lastname'></td>
+                            </tr>
+                            <tr>
+                                <td>Adresa:*</td>
+                                <td><input type='text' name='adresa' [(ngModel)]='address'></td>
+                            </tr>
+                            <tr>
+                                <td>Broj telefona:</td>
+                                <td><input type='text' name='phone' [(ngModel)]='phone'></td>
+                            </tr>
+                            <tr>
+                                <td>Lični vebsajt:</td>
+                                <td><input type='text' name='web' [(ngModel)]='website'></td>
+                            </tr>
+                            <tr>
+                                <td>Lični podaci:</td>
+                                <td><textarea rows="3" cols="23" name='area' [(ngModel)]='bio'></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>Broj kabineta:</td>
+                                <td><input type='text' name='off' [(ngModel)]='office'></td>
+                            </tr>
+                            <tr>
+                                <td>Status:*</td>
+                                <td> <input type="radio" name="status" [(ngModel)]='status' value="active">Aktivan
+                                    <input type="radio"  name="status" [(ngModel)]='status' value="inactive">Neaktivan
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Slika:
+                                </td>
+                                <td>
+                                    <input
+                              style="display: none"
+                              type="file" (change)="onFileChanged($event);onFileSelected($event);onChange($event)" name='file'
+                              #fileInput>
+
+
+                            <button (click)="fileInput.click()" class="btn btn-warning" style="margin-right: 30px; margin-left: 20px;">Izaberite fajl</button> 
+                            <button class="btn btn-danger" (click)="onUpload()">Upload</button>
+                            <span>{{filename}} {{upl}}</span>
+                                </td>
+                            </tr>
+                            
+                        </div>
+                    </table>
+                    <hr/>
+                    <button (click)="dodajKorisnika()" class="btn btn-primary">Dodaj korisnika</button><br/>
+                    <span style="color:darkred">{{msgAdd}}</span>
+                
+                </div>
+                <div class="col-lg-4 cent">
+                    <h3>Ažuriranje korisnika</h3>
+                    Izaberite korisnika:
+                                
+                                    <select name="name" [(ngModel)]='userUpdate' (change)="izabranKorisnik()">
+                                        <option *ngFor="let k of korisnici" value={{k.username}}> {{k.name}} {{k.lastname}}</option>
+                                    </select>    
+                        <table>
+                            <div *ngIf="typeSelected=='S'">
+                                <tr>
+                                    <td>Korisničko ime: </td>
+                                    <td><input type='text' name='usernameS' [(ngModel)]='usernameS' placeholder="piGGBBBBx@student.etf.rs" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td>Indeks:</td>
+                                    <td><input type='text' name='mailS' [(ngModel)]='mailS' placeholder="GGGG/BBBB"></td>
+                                </tr>
+                                <tr>
+                                    <td>Tip studija:</td>
+                                    <td>
+                                        <input type="radio" [(ngModel)]='titleS' value="d" name="tip_studija">Osnovne
+                                        <input type="radio" [(ngModel)]='titleS' value="m" name="tip_studija">Master
+                                        <input type="radio" [(ngModel)]='titleS' value="p" name="tip_studija">Doktorske
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Lozinka:</td>
+                                    <td><input type='text' name='lozinkaS' [(ngModel)]='passwordS'></td>
+                                </tr>
+                                <tr>
+                                    <td>Ime:</td>
+                                    <td><input type='text' name='namev' [(ngModel)]='nameS'></td>
+                                </tr>
+                                <tr>
+                                    <td>Prezime:</td>
+                                    <td><input type='text' name='lastnameS' [(ngModel)]='lastnameS'></td>
+                                </tr>
+                                <tr>
+                                    <td>Status:</td>
+                                    <td> <input type="radio" [(ngModel)]='statusS' value="active">Aktivan
+                                        <input type="radio" [(ngModel)]='statusS' value="inactive">Neaktivan
+                                    </td>
+                                </tr>
+                             
+                            </div>
+    
+                            <div *ngIf="typeSelected=='Z'">
+                                <tr>
+                                    <td>Korisničko ime: </td>
+                                    <td><input type='text' name='usernameS' [(ngModel)]='usernameS' readonly></td>
+                                </tr>
+                                <tr>
+                                    <td>Lozinka:</td>
+                                    <td><input type='text' name='lozinkaS' [(ngModel)]='passwordS'></td>
+                                </tr>
+                                <tr>
+                                    <td>Zvanje:</td>
+                                    <td>
+                                        <select name="titulaS" [(ngModel)]='titleS'>
+                                            <option value="redovni profesor">Redovni profesor</option>
+                                            <option value="vanredni profesor">Vanredni profesor</option>
+                                            <option value="docent">Docent</option>
+                                            <option value="asistent">Asistent</option>
+                                            <option value="saradnik u nastavi">Saradnik u nastavi</option>
+                                            <option value="istrazivac">Istraživač</option>
+                                            <option value="laboratorijski inzenjer">Laboratorijski inženjer</option>
+                                            <option value="laboratorijski tehnicar">Laboratorijski tehničar</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ime:</td>
+                                    <td><input type='text' name='nameS' [(ngModel)]='nameS'></td>
+                                </tr>
+                                <tr>
+                                    <td>Prezime:</td>
+                                    <td><input type='text' name='lastnameS' [(ngModel)]='lastnameS'></td>
+                                </tr>
+                                <tr>
+                                    <td>Status:</td>
+                                    <td> <input type="radio" name="statusS" [(ngModel)]='statusS' value="active">Aktivan
+                                        <input type="radio"  name="statusS" [(ngModel)]='statusS' value="inactive">Neaktivan
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Slika:
+                                    </td>
+                                    <td>
+                                        <input
+                                  style="display: none"
+                                  type="file" (change)="onFileChanged($event);onFileSelectedS($event);onChange($event)" name='file'
+                                  #fileInput>
+    
+    
+                                <button (click)="fileInput.click()" class="btn btn-warning" style="margin-right: 30px; margin-left: 20px;">Izaberite fajl</button> 
+                                <button class="btn btn-danger" (click)="onUpload()">Upload</button>
+                                <span>{{filename}} {{upl}}</span>
+                                    </td>
+                                </tr>
+                            </div>
+                            
+                        </table> <hr/> 
+                        <button (click)="azurirajKorisnika()" class="btn btn-primary">Ažuriraj korisnika</button> <br/>
+                        {{msgUpdate}}
+                    
+                </div>
+                <div class="col-lg-4 cent">
+                    <h3>Brisanje korisnika</h3>
+                    <select name="name" [(ngModel)]='userDelete' (change)="izabranBrisanje()">
+                        <option *ngFor="let k of korisnici" value={{k.username}}> {{k.name}} {{k.lastname}}</option>
+                    </select> <br/> <hr/> 
+                    <button (click)="obrisiKorisnika()" class="btn btn-primary">Obriši korisnika</button>  <br/>
+                    {{msgDel}}
+                </div>
+
+                <div class="col-lg-4 cent">
+                    <h3>Dodavanje predmeta</h3>
+                    <table>
+                        <tr>
+                            <td>Naziv:</td>
+                            <td><input type='text' name='naziv' [(ngModel)]='naziv'></td>
+                        </tr>
+                        <tr>
+                            <td>Tip:</td>
+                                    <td> <input type="radio" [(ngModel)]='tip' value="izborni">Izborni
+                                        <input type="radio" [(ngModel)]='tip' value="obavezni">Obavezni
+                                    </td>
+                        </tr>
+                        <tr>
+                            <td>Semestar:</td>
+                            <td>
+                                <select name="semestar" [(ngModel)]='semestar'>
+                                    <option [ngValue]="1">1</option>
+                                    <option [ngValue]="2">2</option>
+                                    <option [ngValue]="3">3</option>
+                                    <option [ngValue]="4">4</option>
+                                    <option [ngValue]="5">5</option>
+                                    <option [ngValue]="6">6</option>
+                                    <option [ngValue]="7">7</option>
+                                    <option [ngValue]="8">8</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Godina:</td>
+                            <td>
+                                <select name="godina" [(ngModel)]='godina'>
+                                    <option [ngValue]="1">1</option>
+                                    <option [ngValue]="2">2</option>
+                                    <option [ngValue]="3">3</option>
+                                    <option [ngValue]="4">4</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Odsek:</td>
+                            <td>
+                                <select name="odsek" [(ngModel)]='odsek'>
+                                    <option value="rti">RTI</option>
+                                    <option value="si">SI</option>
+                                    <option value="ostali">Ostali</option>
+                                    <option value="master">Master</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Šifra:</td>
+                            <td><input type='text' name='sifra' [(ngModel)]='sifra'></td>
+                        </tr>
+                        <tr>
+                            <td>Fond:</td>
+                            <td><input type='text' name='fond' (change)="terminiInputs()" [(ngModel)]='fond'></td>
+                        </tr>
+                        <tr>
+                            <td>Espb:</td>
+                            <td><select name="espb" [(ngModel)]='espb'>
+                                <option [ngValue]="2">2</option>
+                                <option [ngValue]="3">3</option>
+                                <option [ngValue]="5">5</option>
+                                <option [ngValue]="6">6</option>
+                            </select>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>Dodatne info:</td>
+                            <td><input type='text' name='dodatno' [(ngModel)]='dodatno'></td>
+                        </tr>
+                        <tr>
+                            <td>Cilj:</td>
+                            <td><textarea rows="2" cols="35" name='cilj' [(ngModel)]='cilj'></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Ishod:</td>
+                            <td><textarea rows="2" cols="35" name='ishod' [(ngModel)]='ishod'></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Termini predavanja:</td>
+                            <td>
+                                <div *ngFor="let t of arrayP; let i = index;">
+                                    <input type='text' [(ngModel)]="predavanjaTerm[i]">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Termini vežbi:</td>
+                            <td>
+                                <div *ngFor="let t of arrayV; let i = index;">
+                                    <input type='text' [(ngModel)]="vezbeTerm[i]">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <hr/>
+                    <button (click)="dodajPredmetAdmin()" class="btn btn-primary">Dodaj predmet</button> <br/>
+                    {{msgAddPred}}
+                </div>
+                <div class="col-lg-4 cent">
+                    <h3>Ažuriranje predmeta</h3>
+                    Izaberite predmet:
+                    <select name="predmets" [(ngModel)]='predmetUpdate' (change)="izabranPredmet()">
+                        <option *ngFor="let p of predmeti" value={{p.sifra}}> {{p.naziv}} {{p.sifra}}</option>
+                    </select>  <br/> <hr/>
+                    <table>
+                        <!-- tu stavi 2way sa propertijima predmeta-->
+                        <tr>
+                            <td>Naziv:</td>
+                            <td><input type='text' name='nazivS' [(ngModel)]='nazivS'></td>
+                        </tr>
+                        <tr>
+                            <td>Tip:</td>
+                                    <td> <input type="radio" [(ngModel)]='tipS' value="izborni">Izborni
+                                        <input type="radio" [(ngModel)]='tipS' value="obavezni">Obavezni
+                                    </td>
+                        </tr>
+                        <tr>
+                            <td>Semestar:</td>
+                            <td>
+                                <select name="semestarS" [(ngModel)]='semestarS'>
+                                    <option [ngValue]="1">1</option>
+                                    <option [ngValue]="2">2</option>
+                                    <option [ngValue]="3">3</option>
+                                    <option [ngValue]="4">4</option>
+                                    <option [ngValue]="5">5</option>
+                                    <option [ngValue]="6">6</option>
+                                    <option [ngValue]="7">7</option>
+                                    <option [ngValue]="8">8</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Godina:</td>
+                            <td>
+                                <select name="godinaS" [(ngModel)]='godinaS'>
+                                    <option [ngValue]="1">1</option>
+                                    <option [ngValue]="2">2</option>
+                                    <option [ngValue]="3">3</option>
+                                    <option [ngValue]="4">4</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Odsek:</td>
+                            <td>
+                                <select name="odsekS" [(ngModel)]='odsekS'>
+                                    <option value="rti">RTI</option>
+                                    <option value="si">SI</option>
+                                    <option value="ostali">Ostali</option>
+                                    <option value="master">Master</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Šifra:</td>
+                            <td><input type='text' name='sifraS' [(ngModel)]='sifraS'></td>
+                        </tr>
+                        <tr>
+                            <td>Fond:</td>
+                            <td><input type='text' name='fondS' (change)="terminiInputsSel()"  [(ngModel)]='fondS'></td>
+                        </tr>
+                        <tr>
+                            <td>Espb:</td>
+                            <td><select name="espbS" [(ngModel)]='espbS'>
+                                <option [ngValue]="2">2</option>
+                                <option [ngValue]="3">3</option>
+                                <option [ngValue]="5">5</option>
+                                <option [ngValue]="6">6</option>
+                            </select>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>Dodatne info:</td>
+                            <td><input type='text' name='dodatnoS' [(ngModel)]='dodatnoS'></td>
+                        </tr>
+                        <tr>
+                            <td>Cilj:</td>
+                            <td><textarea rows="2" cols="35" name='ciljS' [(ngModel)]='ciljS'></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Ishod:</td>
+                            <td><textarea rows="2" cols="35" name='ishodS' [(ngModel)]='ishodS'></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Termini predavanja:</td>
+                            <td>
+                                <div *ngFor="let t of arrayPS; let i = index;">
+                                    <input type='text' [(ngModel)]="predavanjaTermS[i]">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Termini vežbi:</td>
+                            <td>
+                                <div *ngFor="let t of arrayVS; let i = index;">
+                                    <input type='text' [(ngModel)]="vezbeTermS[i]">
+                                </div>
+                            </td> 
+                        </tr>
+                    </table>
+                    <hr/>
+                    <button (click)="azurirajPredmet()" class="btn btn-primary">Ažuriraj predmet</button> <br/>
+                    {{msgUpdPred}}
+                </div>
+                <div class="col-lg-4 cent">
+                    <h3>Brisanje predmeta</h3>
+                    <select name="predmets" [(ngModel)]='predmetDelete' (change)="izabranPredmet()">
+                        <option *ngFor="let p of predmeti" value={{p.sifra}}> {{p.naziv}} {{p.sifra}}</option>
+                    </select>  <br/> <hr/>
+                    <button (click)="obrisiPredmet()" class="btn btn-primary">Obriši predmet</button> <br/>
+                    <span style="color:darkred">{{msgDelPred}}</span>
+                    <hr/>
+                    <h3>Dodeljivanje predmeta predavačima</h3>
+                    Izaberite predavača:
+                    <select name="predmets" [(ngModel)]='predavacPA'>
+                        <option *ngFor="let p of sviPredavaci" value={{p.username}}> {{p.name}} {{p.lastname}}</option>
+                    </select>
+                    <br/>
+                    Izaberite predmet:
+                    <select name="predmets" [(ngModel)]='sifraPA'>
+                        <option *ngFor="let p of predmeti" value={{p.sifra}}> {{p.naziv}}</option>
+                    </select>
+                    <table>
+                        <td>
+                            Grupa:
+                        </td>
+                        <td>
+                            <input type="text" [(ngModel)]='grupaPA' placeholder="P|V(NUM)">
+                        </td>
+                    </table>
+                    <button (click)="dodajPredavaca()" class="btn btn-primary">Dodaj u plan angažovanja</button> <br/> 
+                    <span style="color:darkred">{{msgDodPred}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"> Copyright Nikola Milicevic - ETF SI 2021</footer>
+  </div>

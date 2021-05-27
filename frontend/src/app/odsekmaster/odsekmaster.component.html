@@ -1,0 +1,42 @@
+<div id="page-container">
+    <div id="content-wrap">
+        <app-header></app-header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h4>Semestar 1</h4>
+                    <div *ngFor="let p of predmeti">
+                        <div *ngIf="p.semestar==1">
+                            Šifra:{{p.sifra}} {{p.naziv}} Godina: {{p.godina}} Semestar: {{p.semestar}} <div *ngIf="tip!='N'">
+                                <div *ngFor="let ps of predmetiSlusanje">
+                                    <div *ngIf="p.sifra==ps">
+                                        <a routerLink='/predmet/{{p.sifra}}'>Više informacija</a>
+                                    </div>
+                                </div>
+                            </div> <hr/>
+                        </div>
+                    </div>
+                    <h4>Semestar 2</h4>
+                    <div *ngFor="let p of predmeti">
+                        <div *ngIf="p.semestar==2">
+                            Šifra:{{p.sifra}} {{p.naziv}} Godina: {{p.godina}} Semestar: {{p.semestar}} <div *ngIf="tip!='N'">
+                                <div *ngFor="let ps of predmetiSlusanje">
+                                    <div *ngIf="p.sifra==ps">
+                                        <a routerLink='/predmet/{{p.sifra}}'>Više informacija</a>
+                                    </div>
+                                </div>
+                            </div> <hr/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div *ngIf="tip=='Z'">
+                        <app-azuriranje-predmeta [rut]="'master'"></app-azuriranje-predmeta>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"> Copyright Nikola Milicevic - ETF SI 2021</footer>
+  </div>
+

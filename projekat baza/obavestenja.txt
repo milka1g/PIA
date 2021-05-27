@@ -1,0 +1,124 @@
+/* 1 */
+{
+    "_id" : ObjectId("60382ea357851b3e64e1e916"),
+    "predmeti" : [ 
+        "13S114PP1", 
+        "13S111P2"
+    ],
+    "fajlovi" : [],
+    "id" : 1614294691688.0,
+    "naslov" : "Prva vest",
+    "tekst" : "Hej",
+    "username" : "bojic",
+    "ime" : "Dragan",
+    "prezime" : "Bojic",
+    "datum" : "2021-02-26",
+    "__v" : 0
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("6038329457851b3e64e1e918"),
+    "predmeti" : [ 
+        "13S114PP1"
+    ],
+    "fajlovi" : [],
+    "id" : 1614295700603.0,
+    "naslov" : "Treca vest",
+    "tekst" : "Hehj",
+    "username" : "bojic",
+    "ime" : "Dragan",
+    "prezime" : "Bojic",
+    "datum" : "2021-01-06",
+    "__v" : 0
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("6038362257851b3e64e1e919"),
+    "predmeti" : [ 
+        "13S114PP1"
+    ],
+    "fajlovi" : [],
+    "id" : 1614296610560.0,
+    "naslov" : "Cetvrta",
+    "tekst" : "dosadnooo",
+    "username" : "bojic",
+    "ime" : "Dragan",
+    "prezime" : "Bojic",
+    "datum" : "2020-12-10",
+    "__v" : 0
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("60383b0657851b3e64e1e91b"),
+    "predmeti" : [ 
+        "13S114PP1"
+    ],
+    "fajlovi" : [ 
+        "PP1 M1.pdf", 
+        "PP1 P1.txt"
+    ],
+    "id" : 1614297862219.0,
+    "naslov" : "Peta vest",
+    "tekst" : "Radnom",
+    "username" : "bojic",
+    "ime" : "Dragan",
+    "prezime" : "Bojic",
+    "datum" : "2021-02-25",
+    "__v" : 0
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("6038d486df5efd0aa8861381"),
+    "predmeti" : [ 
+        "13S111P2"
+    ],
+    "fajlovi" : [],
+    "id" : 1614337158715.0,
+    "naslov" : "Ucite deco",
+    "tekst" : "Pa morate da ucite P2 jako.",
+    "username" : "milo",
+    "ime" : "Milo",
+    "prezime" : "Tomasevic",
+    "datum" : "2021-02-24",
+    "__v" : 0
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("6038d5a6df5efd0aa8861389"),
+    "predmeti" : [ 
+        "13S111P2"
+    ],
+    "fajlovi" : [],
+    "id" : 1614337446642.0,
+    "naslov" : "P2 obavest 2",
+    "tekst" : "Drugo obavestenje deco.",
+    "username" : "milo",
+    "ime" : "Milo",
+    "prezime" : "Tomasevic",
+    "datum" : "2021-02-25",
+    "__v" : 0
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("6038d9d8ab15213c2c41b94d"),
+    "predmeti" : [ 
+        "13E112AR"
+    ],
+    "fajlovi" : [ 
+        "rezultati_klk2AR.docx"
+    ],
+    "id" : 1614338520283.0,
+    "naslov" : "AR vest 1",
+    "tekst" : "Nemam sta reci",
+    "username" : "zaharije",
+    "ime" : "Zaharije",
+    "prezime" : "Radivojevic",
+    "datum" : "2021-02-17",
+    "__v" : 0
+}

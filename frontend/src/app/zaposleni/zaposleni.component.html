@@ -1,0 +1,23 @@
+<div id="page-container">
+    <div id="content-wrap">
+        <app-header></app-header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4"> 
+                </div>
+                <div class="col-lg-4">
+                    <div *ngFor="let zap of allZaposleni">
+                         <a routerLink='/zaposlen/{{zap.username}}'><h5>{{zap.name}} {{zap.lastname}} - {{zap.title}}</h5></a> <br/>
+                        <div *ngFor="let p of allPlanAng">
+                            <div *ngIf="zap.username==p.username">
+                                {{p.sifra}}
+                            </div>
+                        </div>
+                        <hr/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"> Copyright Nikola Milicevic - ETF SI 2021</footer>
+  </div>

@@ -1,0 +1,10 @@
+                            <input
+                              style="display: none"
+                              type="file" (change)="onFileChanged($event);onFileSelected($event)" name='file'
+                              #fileInput>
+
+
+                            <button (click)="fileInput.click()" class="btn btn-warning" style="margin-right: 30px; margin-left: 20px;">Izaberite fajl</button> 
+                            <button class="btn btn-danger" (click)="onUpload()">Upload</button>
+                            <span>{{filename}} {{upl}}</span>
+                            

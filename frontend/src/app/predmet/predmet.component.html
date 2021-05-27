@@ -1,0 +1,204 @@
+<div id="page-container">
+    <div id="content-wrap">
+        <app-header></app-header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                      
+                </div>
+                <div class="col-lg-6">
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                          
+                            <div class="card-header" id="headingOne">
+                              <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  <h4>Obaveštenja o predmetu</h4>
+                                </button>
+                              </h2>
+                            </div>
+                        
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                              <div class="card-body">
+                                <div *ngFor="let o of obavestenjaPredmeta" style="margin-bottom: 40px;">
+                                <div [ngClass]="{'boja':o.sevendays==true}">
+                                  <div align="center" style="height: 10px;"><h6>{{o.naslov}}</h6></div><br/>
+                                </div>
+                                {{o.tekst}} - {{o.ime}} {{o.prezime}}, {{o.datum}} <br/>
+                                  <hr/>
+                                  <h6>Fajlovi:</h6>
+                                  <div *ngIf="o.fajlovi.length==0"> Nema dostupnih fajlova </div>
+                                  <div *ngFor="let f of o.fajlovi;let i = index;">
+                                    <div style="margin-bottom: 12px;">
+                                      {{f}} <button (click)="downloadFile(f);" class="btn btn-info" style="margin-right: 10px;">Preuzmite</button>
+                    
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <h4>Informacije o predmetu</h4>
+                              </button>
+                            </h2>
+                          </div>
+                          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                             {{predmet.naziv}} | šifra: {{predmet.sifra}} | tip: {{predmet.tip}} | semestar: {{predmet.semestar}} <hr/>
+                             fond časova: {{predmet.fond}} | ESPB: {{predmet.espb}} <hr/>
+                             cilj: {{predmet.cilj}} <hr/>
+                             ishod: {{predmet.ishod}} <hr/>
+                             Predavanja:
+                             <div *ngFor="let t of predmet.predavanjaTerm">
+                                 {{t}}
+                             </div> <hr/>
+                             Vežbe:
+                             <div *ngFor="let t of predmet.vezbeTerm">
+                                 {{t}}
+                             </div> <hr/>
+                             Nastavnici: 
+                             <div *ngFor="let p of sviPredavaci">
+                               {{p}}
+                             </div> 
+                             <hr/>
+                             <div *ngIf="predmet.dodatno!=null">
+                                 Dodatne info: {{predmet.dodatno}}
+                             </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <h4>Predavanja - materijali</h4>
+                              </button>
+                            </h2>
+                          </div>
+                          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                              <div *ngIf="predavanjaFajlovi.length==0">
+                                Nema dostupnih materijala
+                              </div>
+                              <div *ngFor="let f of predavanjaFajlovi;let i = index;">
+                                <div style="margin-bottom: 17px;">
+                                  <h6>{{f.naziv}}</h6> veličina: {{f.velicina}}KB datum: {{f.datum}} tip:{{f.tip}} postavio: {{f.ime}} {{f.prezime}}
+                                  <button (click)="downloadFile(f.naziv);" class="btn btn-outline-warning" style="margin-right: 10px;">Preuzmite</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                              <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                  <h4>
+                                    Vežbe - materijali
+                                  </h4>
+                                </button>
+                              </h2>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                              <div class="card-body">
+                                <div *ngIf="vezbeFajlovi.length==0">
+                                  Nema dostupnih materijala
+                                </div>
+                                <div *ngFor="let f of vezbeFajlovi;let i = index;">
+                                  <div style="margin-bottom: 17px;">
+                                    <h6>{{f.naziv}}</h6> veličina: {{f.velicina}}KB datum: {{f.datum}} tip:{{f.tip}} postavio: {{f.ime}} {{f.prezime}}
+                                    <button (click)="downloadFile(f.naziv);" class="btn btn-outline-warning" style="margin-right: 10px;">Preuzmite</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div *ngIf="predmet.deacIspitna==0">
+                          <div class="card">
+                            <div class="card-header" id="headingFive">
+                              <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                  <h4>Ispitna pitanja</h4>
+                                </button>
+                              </h2>
+                            </div>
+                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                              <div class="card-body">
+                                <div *ngIf="rokoviFajlovi.length==0">
+                                  Nema dostupnih materijala
+                                </div>
+                                <div *ngFor="let f of rokoviFajlovi;let i = index;">
+                                  <div style="margin-bottom: 17px;">
+                                    <h6>{{f.naziv}}</h6> veličina: {{f.velicina}}KB datum: {{f.datum}} tip:{{f.tip}} postavio: {{f.ime}} {{f.prezime}}
+                                    <button (click)="downloadFile(f.naziv);" class="btn btn-outline-warning" style="margin-right: 10px;">Preuzmite</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div *ngIf="predmet.deacLab==0">
+                          <div class="card">
+                            <div class="card-header" id="headingSix">
+                              <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                  <h4>Laboratorija</h4>
+                                </button>
+                              </h2>
+                            </div>
+                            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                              <div class="card-body">
+                                <textarea rows="3" cols="100"  [(ngModel)]='predmet.dodatnoLab' readonly></textarea>
+                                <div *ngIf="labFajlovi.length==0">
+                                  Nema dostupnih materijala
+                                </div>
+                                <div *ngFor="let f of labFajlovi;let i = index;">
+                                  <div style="margin-bottom: 17px;">
+                                    <h6>{{f.naziv}}</h6> veličina: {{f.velicina}}KB datum: {{f.datum}} tip:{{f.tip}} postavio: {{f.ime}} {{f.prezime}}
+                                    <button (click)="downloadFile(f.naziv);" class="btn btn-outline-warning" style="margin-right: 10px;">Preuzmite</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div *ngIf="predmet.deacDomaci==0">
+                          <div class="card">
+                            <div class="card-header" id="headingSeven">
+                              <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                  <h4>Domaći/Projekat</h4>
+                                </button>
+                              </h2>
+                            </div>
+                            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                              <div class="card-body">
+                                <textarea rows="3" cols="100"  [(ngModel)]='predmet.dodatnoDom' readonly></textarea>
+                                <div *ngIf="domaciFajlovi.length==0">
+                                  Nema dostupnih materijala
+                                </div>
+                                <div *ngFor="let f of domaciFajlovi;let i = index;">
+                                  <div style="margin-bottom: 17px;">
+                                    <h6>{{f.naziv}}</h6> veličina: {{f.velicina}}KB datum: {{f.datum}} tip:{{f.tip}} postavio: {{f.ime}} {{f.prezime}}
+                                    <button (click)="downloadFile(f.naziv);" class="btn btn-outline-warning" style="margin-right: 10px;">Preuzmite</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <footer id="footer"> Copyright Nikola Milicevic - ETF SI 2021</footer>
+  </div>
+
+

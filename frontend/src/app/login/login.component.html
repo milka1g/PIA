@@ -1,0 +1,44 @@
+<div *ngIf="loggedIn==false || loggedIn==null">
+    <form>
+        <table>
+            <tr>
+                <td>Korisničko ime:</td>
+                <td>
+                    <input type='text' name='kor_ime' [(ngModel)]='username'>
+                </td>
+            </tr>
+            <tr>
+                <td>Lozinka:</td>
+                <td>
+                    <input type='password' name='lozinka' [(ngModel)]='password'>
+                </td>
+            </tr>
+            <tr>
+                <td colspan='2'>
+                    <input type=button value="Prijava" class="btn btn-primary" (click)='login()'>
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+<span class='greska'>{{msg}}<br></span>  
+
+<a routerLink="/registracija">Registrujte se</a>
+</div>
+
+<div *ngIf="loggedIn==true">
+    <input type=button value="Izlogujte se" class="btn btn-primary" (click)='logout()'>
+    <div *ngIf="user.pwchg>0">
+        <a routerLink="/promena-lozinke">Promenite lozinku</a>
+    </div>
+    <div *ngIf="user.pwchg==0">
+        Pri prvoj prijavi na sistem obavezna je promena lozinke!
+        <app-promena-lozinke></app-promena-lozinke>
+    </div>
+    
+  </div>
+
+
+
+
+

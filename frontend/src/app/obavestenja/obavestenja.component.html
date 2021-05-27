@@ -1,0 +1,42 @@
+<h4>Dodavanje obaveštenja</h4>
+
+<table>
+    <tr>
+        <td>Naslov:</td>
+        <td><input type='text'  [(ngModel)]='naslov'></td>
+    </tr>
+    <tr>
+        <td>Izaberite predmete:</td>
+        <td>
+            <select name="name" [(ngModel)]='izabraniPredmeti' multiple>
+                <option *ngFor="let p of sviPredmetiZap" value={{p.sifra}}> {{p.naziv}}</option>
+            </select>   
+        </td>
+    </tr>
+    <tr>
+        <td>Tekst:</td>
+        <td><input type='text'  [(ngModel)]='tekst'></td>
+    </tr>
+    <tr>
+        <td>Datum:</td>
+        <td>
+            <input type='date'  [(ngModel)]='datum'>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Fajl(ovi):
+        </td>
+        <td>
+            <input
+      style="display: none"
+      type="file" (change)="onFileChanged($event);onFileSelected($event)" name='file'
+      #fileInput>
+    <button (click)="fileInput.click()" class="btn btn-warning" style="margin-right: 10px;">Izaberite fajl</button> 
+    <button class="btn btn-danger" (click)="onUpload()">Upload</button>
+    <span>{{filename}} {{upl}}</span>
+        </td>
+    </tr>
+</table> 
+<br/><hr/>
+<button (click)="dodajObavestenja()" class="btn btn-warning">Dodaj obaveštenje</button>

@@ -1,0 +1,114 @@
+<div id="page-container">
+    <div id="content-wrap">
+        <app-header></app-header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h4>Godina: 1 Semestar: 1</h4>
+                    <div *ngFor="let p of predmeti">
+                        <div *ngIf="p.semestar==1">
+                            Šifra:{{p.sifra}} {{p.naziv}} Godina: {{p.godina}} Semestar: {{p.semestar}} <div *ngIf="tip!='N'">
+                                <div *ngFor="let ps of predmetiSlusanje">
+                                    <div *ngIf="p.sifra==ps">
+                                        <a routerLink='/predmet/{{p.sifra}}'>Više informacija</a>
+                                    </div>
+                                </div>
+                            </div> <hr/>
+                        </div>
+                    </div>
+                <h4>Godina: 1 Semestar: 2</h4>
+                    <div *ngFor="let p of predmeti">
+                        <div *ngIf="p.semestar==2">
+                            Šifra:{{p.sifra}} {{p.naziv}} Godina: {{p.godina}} Semestar: {{p.semestar}} <div *ngIf="tip!='N'">
+                                <div *ngFor="let ps of predmetiSlusanje">
+                                    <div *ngIf="p.sifra==ps">
+                                        <a routerLink='/predmet/{{p.sifra}}'>Više informacija</a>
+                                    </div>
+                                </div>
+                            </div> <hr/>
+                        </div>
+                    </div>
+                <h4>Godina: 2 Semestar: 3</h4>
+                    <div *ngFor="let p of predmeti">
+                        <div *ngIf="p.semestar==3">
+                            Šifra:{{p.sifra}} {{p.naziv}} Godina: {{p.godina}} Semestar: {{p.semestar}} <div *ngIf="tip!='N'">
+                                <div *ngFor="let ps of predmetiSlusanje">
+                                    <div *ngIf="p.sifra==ps">
+                                        <a routerLink='/predmet/{{p.sifra}}'>Više informacija</a>
+                                    </div>
+                                </div>
+                            </div> <hr/>
+                        </div>
+                    </div>
+                <h4>Godina: 2 Semestar: 4</h4>
+                    <div *ngFor="let p of predmeti">
+                        <div *ngIf="p.semestar==4">
+                            Šifra:{{p.sifra}} {{p.naziv}} Godina: {{p.godina}} Semestar: {{p.semestar}} <div *ngIf="tip!='N'">
+                                <div *ngFor="let ps of predmetiSlusanje">
+                                    <div *ngIf="p.sifra==ps">
+                                        <a routerLink='/predmet/{{p.sifra}}'>Više informacija</a>
+                                    </div>
+                                </div>
+                            </div> <hr/>
+                        </div>
+                    </div>
+                <h4>Godina: 3 Semestar: 5</h4>
+                    <div *ngFor="let p of predmeti">
+                        <div *ngIf="p.semestar==5">
+                            Šifra:{{p.sifra}} {{p.naziv}} Godina: {{p.godina}} Semestar: {{p.semestar}} <div *ngIf="tip!='N'">
+                                <div *ngFor="let ps of predmetiSlusanje">
+                                    <div *ngIf="p.sifra==ps">
+                                        <a routerLink='/predmet/{{p.sifra}}'>Više informacija</a>
+                                    </div>
+                                </div>
+                            </div> <hr/>
+                        </div>
+                    </div>
+                <h4>Godina: 3 Semestar: 6</h4>
+                    <div *ngFor="let p of predmeti">
+                        <div *ngIf="p.semestar==6">
+                            Šifra:{{p.sifra}} {{p.naziv}} Godina: {{p.godina}} Semestar: {{p.semestar}} <div *ngIf="tip!='N'">
+                                <div *ngFor="let ps of predmetiSlusanje">
+                                    <div *ngIf="p.sifra==ps">
+                                        <a routerLink='/predmet/{{p.sifra}}'>Više informacija</a>
+                                    </div>
+                                </div>
+                            </div> <hr/>
+                        </div>
+                    </div>
+                <h4>Godina: 4 Semestar: 7</h4>
+                    <div *ngFor="let p of predmeti">
+                        <div *ngIf="p.semestar==7">
+                            Šifra:{{p.sifra}} {{p.naziv}} Godina: {{p.godina}} Semestar: {{p.semestar}} <div *ngIf="tip!='N'">
+                                <div *ngFor="let ps of predmetiSlusanje">
+                                    <div *ngIf="p.sifra==ps">
+                                        <a routerLink='/predmet/{{p.sifra}}'>Više informacija</a>
+                                    </div>
+                                </div>
+                            </div> <hr/>
+                        </div>
+                    </div>
+                <h4>Godina: 4 Semestar: 8</h4>
+                    <div *ngFor="let p of predmeti">
+                        <div *ngIf="p.semestar==8">
+                            Šifra:{{p.sifra}} {{p.naziv}} Godina: {{p.godina}} Semestar: {{p.semestar}} <div *ngIf="tip!='N'">
+                                <div *ngFor="let ps of predmetiSlusanje">
+                                    <div *ngIf="p.sifra==ps">
+                                        <a routerLink='/predmet/{{p.sifra}}'>Više informacija</a>
+                                    </div>
+                                </div>
+                            </div> <hr/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div *ngIf="tip=='Z'">
+                        <app-azuriranje-predmeta [rut]="'si'"></app-azuriranje-predmeta>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <footer id="footer"> Copyright Nikola Milicevic - ETF SI 2021</footer>
+  </div>

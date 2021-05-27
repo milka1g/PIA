@@ -1,0 +1,39 @@
+<div id="page-container">
+    <div id="content-wrap">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <table>
+                        <tr>
+                            <td>Stara lozinka:</td>
+                            <td>
+                                <input type='password' name='stara' [(ngModel)]='oldpw'>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Nova lozinka:</td>
+                            <td>
+                                <input type='password' name='nova' [(ngModel)]='newpw1'>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ponovite novu lozinku:</td>
+                            <td>
+                                <input type='password' name='nova2' [(ngModel)]='newpw2'>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan='2'>
+                                <input type='button' value='Promena lozinke' (click)='promenaLozinke()'>
+                            </td>
+                        </tr>
+                    </table>   
+                    <span style="color: darkred;">{{msg}}</span>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <footer id="footer"> Copyright Nikola Milicevic - ETF SI 2021</footer>
+  </div>
+

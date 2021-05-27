@@ -1,0 +1,15 @@
+
+<h4>Brisanje obaveštenja</h4>
+
+<table>
+    <tr>
+        <td>Izaberite obaveštenje:</td>
+        <td>
+            <select name="nam" [(ngModel)]='id'>
+                <option *ngFor="let o of svaObavestenja" value={{o.id}}> {{o.naslov}}</option> 
+            </select> 
+        </td>
+    </tr>
+    <br/><hr/>
+    <button class="btn btn-warning" (click)="obrisi()">Obriši obaveštenje</button>
+</table>

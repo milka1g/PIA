@@ -1,0 +1,110 @@
+/* 1 */
+{
+    "_id" : ObjectId("6035495cee50d799cf47d74e"),
+    "sifra" : "13S081M1",
+    "username" : "tamara",
+    "grupa" : "P1"
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("6035495cee50d799cf47d751"),
+    "sifra" : "13S081M1",
+    "username" : "tamara",
+    "grupa" : "V1"
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("6035495cee50d799cf47d754"),
+    "sifra" : "13S041OE",
+    "username" : "ponjavic",
+    "grupa" : "P1"
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("6035495cee50d799cf47d757"),
+    "sifra" : "13S041OE",
+    "username" : "savic",
+    "grupa" : "V1"
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("6035495cee50d799cf47d75a"),
+    "sifra" : "13S114PP1",
+    "username" : "bojic",
+    "grupa" : "P1"
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("6035495cee50d799cf47d75d"),
+    "sifra" : "13S114PP1",
+    "username" : "ziza",
+    "grupa" : "V1"
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("6036bdd2bffbdb35ccc3aab7"),
+    "username" : "adri",
+    "sifra" : "13S112BP1",
+    "grupa" : "V1",
+    "__v" : 0
+}
+
+/* 8 */
+{
+    "_id" : ObjectId("603800526d9e61336c1882ff"),
+    "username" : "bojic",
+    "sifra" : "13S111P2",
+    "grupa" : "P1",
+    "__v" : 0
+}
+
+/* 9 */
+{
+    "_id" : ObjectId("603800586d9e61336c188300"),
+    "username" : "bojic",
+    "sifra" : "13S052SIS",
+    "grupa" : "V1",
+    "__v" : 0
+}
+
+/* 10 */
+{
+    "_id" : ObjectId("6038005e6d9e61336c188301"),
+    "username" : "bojic",
+    "sifra" : "19E071OE1",
+    "grupa" : "P1",
+    "__v" : 0
+}
+
+/* 11 */
+{
+    "_id" : ObjectId("6038d252df5efd0aa886137f"),
+    "username" : "milo",
+    "sifra" : "13S111P2",
+    "grupa" : "P1",
+    "__v" : 0
+}
+
+/* 12 */
+{
+    "_id" : ObjectId("6038d259df5efd0aa8861380"),
+    "username" : "misic",
+    "sifra" : "13S111P2",
+    "grupa" : "V1",
+    "__v" : 0
+}
+
+/* 13 */
+{
+    "_id" : ObjectId("6038d84edf5efd0aa886138e"),
+    "username" : "zaharije",
+    "sifra" : "13E112AR",
+    "grupa" : "P1",
+    "__v" : 0
+}
